@@ -66,4 +66,68 @@
         <tag>CentOs</tag>
       </tags>
   </entry>
+  <entry>
+    <title>centos安装mysql</title>
+    <url>/20221127/centos%E5%AE%89%E8%A3%85mysql/</url>
+    <content><![CDATA[<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p><strong>1、检查Linux是否安装了mariadb数据库，mariadb数据库是mysql的分支</strong></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">执行命令：</span></span><br><span class="line">yum list installed | grep mariadb </span><br></pre></td></tr></table></figure>
+
+<p><strong>2、如果Linux中安装了mariadb数据库，先卸载掉，因为CentOS 7.6 内部集成了mariadb，而安装mysql的话会和mariadb的文件冲突，所以需要先卸载掉mariadb</strong></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">执行命令：</span></span><br><span class="line">yum -y remove mariadb-libs.x86_64</span><br></pre></td></tr></table></figure>
+
+<p><strong>3、下载mysql安装包</strong></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">执行命令：</span></span><br><span class="line">wget https://cdn.mysql.com//Downloads/MySQL-5.7/mysql-5.7.32-linux-glibc2.12-x86_64.tar.gz</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">然后移动到/usr/local下</span></span><br><span class="line">mv mysql-5.7.32-linux-glibc2.12-x86_64.tar.gz /usr/local</span><br></pre></td></tr></table></figure>
+
+<p><strong>4、解压</strong></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">解压tar包：</span></span><br><span class="line">tar -xvf mysql-5.7.32-linux-glibc2.12-x86_64.tar.gz</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">解压下载下来的mysql软件压缩包，执行命令：</span></span><br><span class="line">tar -zxvf mysql-5.7.32-linux-glibc2.12-x86_64.tar.gz</span><br></pre></td></tr></table></figure>
+
+<p><strong>5、更名</strong></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">解压下载下来的mysql软件压缩包，执行命令：</span></span><br><span class="line">mv mysql-5.7.32-linux-glibc2.12-x86_64 mysql</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">然后进入目录</span></span><br><span class="line">cd mysql</span><br></pre></td></tr></table></figure>
+
+<p><strong>6、在mysql-5.7.32文件夹目录下创建一个&#x2F;data&#x2F;3306文件夹</strong></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">执行命令：</span></span><br><span class="line">mkdir -vp ./data </span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">（v表示创建新目录都显示信息，p表示递归创建）</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>7、添加mysql用户及用户组</strong></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">执行命令：</span></span><br><span class="line">groupadd mysql</span><br><span class="line"></span><br><span class="line">useradd mysql -g mysql </span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">（-g: 是指定用户所在组）</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>8、切换到.&#x2F;bin目录下执行：</strong></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">./mysqld --initialize-insecure --user=mysql --datadir=/usr/local/mysql/data --basedir=/usr/local/mysql</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">（--initialize-insecure标识不设置密码， root@localhost is created with an empty password ! Please consider switching off the --initialize-insecure option.）</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>9、在mysql&#x2F;bin目录下</strong></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">执行命令：</span></span><br><span class="line">./mysql_ssl_rsa_setup --datadir=/usr/local/mysql/data （表示安全连接访问，生成RSA私钥）</span><br></pre></td></tr></table></figure>
+
+<p><strong>10、更改mysql-5.7.32整个文件夹目录权限所属</strong></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">执行命令：</span></span><br><span class="line">chown -R mysql:mysql /usr/local/mysql （-R表示迭代递归）</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash"><span class="built_in">chmod</span>：文件/目录权限设置命令</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>11、在&#x2F;etc 目录下创建my.cnf文件</strong></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">[client]</span><br><span class="line">port = 3306</span><br><span class="line">socket = /opt/mysql5.7.32/data/3306/mysql.sock</span><br><span class="line">default-character-set=utf8</span><br><span class="line"></span><br><span class="line">[mysqld]</span><br><span class="line">port = 3306</span><br><span class="line">socket = /opt/mysql5.7.32/data/3306/mysql.sock</span><br><span class="line">datadir = /opt/mysql5.7.32/data/3306</span><br><span class="line">log-error = /opt/mysql5.7.32/data/3306/error.log</span><br><span class="line">pid-file = /opt/mysql5.7.32/data/3306/mysql.pid</span><br><span class="line">lower_case_table_names=1</span><br><span class="line">character-set-server=utf8mb4</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">skip-grant-tables</span></span><br><span class="line"></span><br><span class="line">[mysql]</span><br><span class="line">default-character-set=utf8mb4</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>至此MySQL安装完成;</p>
+<p><strong>12、启动MySQL服务</strong></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">在mysql-5.7.24/bin目录下执行命令：</span></span><br><span class="line">./mysqld_safe --defaults-file=/etc/my.cnf</span><br></pre></td></tr></table></figure>
+
+<p><strong>13、修改密码</strong></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">登录进入mysql，在mysql-5.7.32/bin目录下执行命令：</span></span><br><span class="line">./mysql -uroot -p -P3306 -h127.0.0.1</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">修改mysql的密码，执行：</span></span><br><span class="line">alter user &#x27;root&#x27;@&#x27;localhost&#x27; identified by &#x27;123456&#x27;;</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">然后刷新</span></span><br><span class="line">flush privileges; </span><br></pre></td></tr></table></figure>
+
+<p><strong>14授权远程访问</strong></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">登录进入mysql执行命令：（这样远程客户端才能访问）</span></span><br><span class="line">grant all privileges on *.* to root@&#x27;%&#x27; identified by &#x27;123456&#x27;;</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">其中*.* 的第一个*表示所有数据库名，第二个*表示所有的数据库表；</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">root@<span class="string">&#x27;%&#x27;</span> 中的root表示用户名，%表示ip地址，%也可以指定具体的ip地址，比如root@localhost，root@xx.xx.xx.xx</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">然后刷新</span></span><br><span class="line">flush privileges; </span><br></pre></td></tr></table></figure>
+
+<p><strong>15、关闭MySQL服务</strong></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">进入mysql-5.7.32/bin目录下执行命令：</span></span><br><span class="line">./mysqladmin -uroot -p -P3306 -h127.0.0.1 shutdown</span><br></pre></td></tr></table></figure>
+
+<h1 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h1><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">vim /etc/profile -- 所有用户生效</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">vim ~/.bash_profile --当前用户生效</span></span><br><span class="line">export MYSQL_HOME=&quot;/usr/local/mysql&quot;</span><br><span class="line">export PATH=&quot;$PATH:$MYSQL_HOME/bin&quot;</span><br></pre></td></tr></table></figure>
+
+<h1 id="刷新环境变量"><a href="#刷新环境变量" class="headerlink" title="刷新环境变量"></a>刷新环境变量</h1><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">source  /etc/profile</span><br></pre></td></tr></table></figure>
+
+<h1 id="设置到开机启动"><a href="#设置到开机启动" class="headerlink" title="设置到开机启动"></a>设置到开机启动</h1><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cp /usr/local/mysql/support-files/mysql.server /etc/init.d/mysqld  </span><br><span class="line"></span><br><span class="line">cp //usr/local/mysql/support-files/mysql.server /etc/rc.d/init.d/mysql</span><br><span class="line"></span><br><span class="line">chmod 700 /etc/init.d/mysql   </span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">加入到系统服务命令</span></span><br><span class="line">chkconfig --add mysqld    </span><br><span class="line"></span><br><span class="line">chkconfig --level 2345 mysqld on </span><br></pre></td></tr></table></figure>
+
+<h1 id="其他命令"><a href="#其他命令" class="headerlink" title="其他命令"></a>其他命令</h1><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">启动</span></span><br><span class="line"> service mysql start</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">停止</span></span><br><span class="line"> service mysql stop</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">重启</span></span><br><span class="line"> service mysql restart</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>centos</tag>
+        <tag>mysql</tag>
+      </tags>
+  </entry>
 </search>
