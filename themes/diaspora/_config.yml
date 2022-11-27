@@ -18,6 +18,13 @@ mp3:
   - https://link.hhtjim.com/163/1420349595.mp3
   - https://link.hhtjim.com/163/28029509.mp3
   - http://link.hhtjim.com/163/425570952.mp3
+  - /music/Anesthesia-Vexento.mp3
+  - /music/爱丽丝的梦游仙境.mp3
+  - /music/当爱情在靠近.mp3
+  - /music/海阔天空.mp3
+  - /music/美丽的神话.mp3
+  - /music/咱们结婚吧.mp3
+  - /music/这就是爱吗.mp3
 
 
 
@@ -36,7 +43,7 @@ twitterpic:
   creatorid: yourtwitteridhere
 
 # 是否使用mathjax
-mathjax: false
+mathjax: true
 
 
 # 是否关闭默认滚动条

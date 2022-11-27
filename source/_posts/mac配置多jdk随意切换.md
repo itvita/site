@@ -5,9 +5,9 @@ categories:
 tags:
   - mac
   - jdk
-mp3: https://link.hhtjim.com/kw/45830172.mp3
+mp3: http://np01.sycdn.kuwo.cn/12d1b29abe3f8f5a3848e9d2c84d5001/63834f20/resource/n2/5/55/3065754672.mp3
 cover: /img/1.jpg
-date: 2022-11-27 17:51:35
+date: 2022-11-21 17:51:35
 ---
 
 # 下载安装
