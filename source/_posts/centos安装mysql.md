@@ -5,7 +5,7 @@ categories:
 tags:
   - centos
   - mysql
-date: 2022-11-27 20:24:48
+date: 2022-11-17 20:24:48
 mp3: /music/Anesthesia-Vexento.mp3
 cover: /img/StockSnap_2W0L5IENXQ.jpg
 ---

@@ -1,0 +1,278 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>centos创建sftp账号 - 开心小站</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="itvita,"> 
+    <meta name="description" content="开心小站,it,java,vue,使用系统自带的internal-sftp搭建SFTP服务器。打开命令终端窗口，按以下步骤操作。
+1、查看openssh的版本
+ssh -V 
+
+使用ssh -V 命令来查看openssh的版本，版本,"> 
+    <meta name="author" content="Liu Qiang"> 
+    <link rel="alternative" href="atom.xml" title="开心小站" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+<link rel="stylesheet" href="//unpkg.com/gitalk/dist/gitalk.css">
+
+    
+    
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="centos创建sftp账号 - 开心小站"/>
+    <meta name="twitter:description" content="开心小站,it,java,vue,使用系统自带的internal-sftp搭建SFTP服务器。打开命令终端窗口，按以下步骤操作。
+1、查看openssh的版本
+ssh -V 
+
+使用ssh -V 命令来查看openssh的版本，版本,"/>
+    
+    
+    
+    
+    <meta property="og:site_name" content="开心小站"/>
+    <meta property="og:type" content="object"/>
+    <meta property="og:title" content="centos创建sftp账号 - 开心小站"/>
+    <meta property="og:description" content="开心小站,it,java,vue,使用系统自带的internal-sftp搭建SFTP服务器。打开命令终端窗口，按以下步骤操作。
+1、查看openssh的版本
+ssh -V 
+
+使用ssh -V 命令来查看openssh的版本，版本,"/>
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+    <script>window.searchDbPath = "/search.xml";</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">开心小站</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://itvita.cn"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">centos创建sftp账号</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">centos创建sftp账号</h1>
+        <div class="stuff">
+            <span>十一月 21, 2022</span>
+            
+  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/centos/" rel="tag">centos</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/sftp/" rel="tag">sftp</a></li></ul>
+
+
+        </div>
+        <div class="content markdown">
+            <h2 id="使用系统自带的internal-sftp搭建SFTP服务器。"><a href="#使用系统自带的internal-sftp搭建SFTP服务器。" class="headerlink" title="使用系统自带的internal-sftp搭建SFTP服务器。"></a>使用系统自带的internal-sftp搭建SFTP服务器。</h2><p>打开命令终端窗口，按以下步骤操作。</p>
+<p>1、查看openssh的版本</p>
+<pre><code>ssh -V 
+</code></pre>
+<p>使用ssh -V 命令来查看openssh的版本，版本必须大于4.8p1，低于的这个版本需要升级。</p>
+<p>2、创建sftp组</p>
+<pre><code>groupadd sftp
+</code></pre>
+<p> 3、创建一个sftp用户，用户名为mysftp2020，密码为mysftp2020</p>
+<blockquote>
+<p>修改用户密码和修改Linux用户密码是一样的：</p>
+</blockquote>
+<blockquote>
+<p>注意：这里我们将mysftp2020用户的shell设置为&#x2F;bin&#x2F;false使他没有登陆shell的权限</p>
+</blockquote>
+<pre><code>useradd -g sftp -s /bin/false mysftp2020  //用户名
+passwd mysftp2020  //密码
+</code></pre>
+<p>4、sftp组的用户的home目录统一指定到&#x2F;data&#x2F;sftp下，按用户名区分，这里先新建一个mysftp2020目录，然后指定mysftp2020的home为&#x2F;data&#x2F;sftp&#x2F;mysftp2020<br>sftp组的用户的home目录统一指定到&#x2F;data&#x2F;sftp下</p>
+<pre><code>mkdir -p /data/sftp/mysftp2020
+</code></pre>
+<p>然后指定mysftp2020的home为&#x2F;data&#x2F;sftp&#x2F;mysftp2020</p>
+<p><code>usermod -d /data/sftp/mysftp2020 mysftp2020</code></p>
+<p>5、配置sshd_config</p>
+<pre><code>vim /etc/ssh/sshd_config
+</code></pre>
+<p>找到如下这行，用#符号注释掉，大致在文件末尾处。</p>
+<pre><code>#Subsystem      sftp    /usr/libexec/openssh/sftp-server  
+</code></pre>
+<p>在文件最后面添加如下几行内容，然后保存。</p>
+<pre><code>Subsystem sftp internal-sftp  
+#匹配sftp组的用户，如果有多个组用逗号分割 也可以使用“Match
+Match Group sftp  
+#User mysftp2020”匹配用户，多个用户之间也是用逗号分割
+#用chroot将用户的根目录指定到/data/ftp/%u,%u代表用户名,%h表示用户根目录
+ChrootDirectory /data/sftp/%u  
+#指定sftp命令
+ForceCommand    internal-sftp  
+AllowTcpForwarding no
+#禁止用户使用端口转发 建立用户和组放
+X11Forwarding no
+</code></pre>
+<p>6、设定Chroot目录权限</p>
+<pre><code>chown root:sftp /data/sftp/mysftp2020
+chmod 755 /data/sftp/mysftp2020
+</code></pre>
+<p>7、建立SFTP用户登入后可写入的目录<br>照上面设置后，在重启sshd服务后，用户mysftp2020已经可以登录。但使用chroot指定根目录后，根应该是无法写入的，所以要新建一个目录供mysftp2020上传文件。这个目录所有者为mysftp2020，所有组为sftp，所有者有写入权限，而所有组无写入权限。命令如下：</p>
+<pre><code>mkdir /data/sftp/mysftp2020/upload
+chown mysftp2020:sftp /data/sftp/mysftp2020/upload
+chmod 755 /data/sftp/mysftp2020/upload
+</code></pre>
+<p>8、修改&#x2F;etc&#x2F;selinux&#x2F;config</p>
+<pre><code>vim /etc/selinux/config
+</code></pre>
+<p>将文件中的SELINUX&#x3D;enforcing 修改为 SELINUX&#x3D;disabled ，然后保存。</p>
+<p>再输入命令</p>
+<pre><code>setenforce 0
+</code></pre>
+<p>9、重启sshd服务</p>
+<pre><code>service sshd restart
+</code></pre>
+<p>10、验证sftp环境<br>用mysftp2020用户名登录，yes确定，回车输入密码。</p>
+<pre><code>sftp mysftp2020@127.0.0.1
+</code></pre>
+<p>显示 sftp&gt; 则sftp搭建成功。</p>
+<p>11、使用FileZilla FTP Client连接SFTP服务器</p>
+<blockquote>
+<p>输入主机IP地址、用户名、密码、端口连接SFTP服务器，端口默认为22。</p>
+</blockquote>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="/music/只要平凡-张杰&张碧晨.mp3">
+            </audio>
+            
+        </div>
+        
+        
+    <div id="gitalk-container" class="comment link"
+		data-enable="true"
+        data-ae="true"
+        data-ci="d1bce04390a8da2fa2ac"
+        data-cs="7194f621e1c1fa838710abd2a4a7ff05e4e511de"
+        data-r="site"
+        data-o="itvita"
+        data-a="itvita"
+        data-d="true"
+    >查看评论</div>
+
+
+    </div>
+    
+        <div class="side">
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%87%AA%E5%B8%A6%E7%9A%84internal-sftp%E6%90%AD%E5%BB%BASFTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E3%80%82"><span class="toc-number">1.</span> <span class="toc-text">使用系统自带的internal-sftp搭建SFTP服务器。</span></a></li></ol>
+        </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+<script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+        tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno",skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']},
+        TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}" } },
+        messageStyle: "none"
+    });
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+
+</html>

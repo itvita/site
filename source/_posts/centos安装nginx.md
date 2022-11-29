@@ -5,7 +5,7 @@ categories:
 tags:
   - centos
   - nginx
-date: 2022-11-27 20:44:04
+date: 2022-11-17 20:44:04
 mp3: /music/Asgard-Electus.mp3
 cover: /img/microsoft-edge-RoaneQUy84A-unsplash.jpg
 ---

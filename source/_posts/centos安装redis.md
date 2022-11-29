@@ -5,7 +5,7 @@ categories:
 tags:
   - centos
   - redis
-date: 2022-11-29 11:26:32
+date: 2022-11-19 11:26:32
 mp3: /music/Your Open Eyes-Xeuphoria.mp3
 cover: /img/d1f7620ea8f039e4f606788715251212.jpg
 ---
