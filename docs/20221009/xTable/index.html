@@ -1,0 +1,517 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>xTable - 开心小站</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="itvita,"> 
+    <meta name="description" content="开心小站,it,java,vue,
+示例
+代码
+属性
+columns
+action
+formatter 示例
+格式化为文本
+格式化为徽章
+格式化为图片
+
+
+
+
+事件
+方法
+
+示例
+代码123456789101112131415161,"> 
+    <meta name="author" content="Liu Qiang"> 
+    <link rel="alternative" href="atom.xml" title="开心小站" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+<link rel="stylesheet" href="//unpkg.com/gitalk/dist/gitalk.css">
+
+    
+    
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="xTable - 开心小站"/>
+    <meta name="twitter:description" content="开心小站,it,java,vue,
+示例
+代码
+属性
+columns
+action
+formatter 示例
+格式化为文本
+格式化为徽章
+格式化为图片
+
+
+
+
+事件
+方法
+
+示例
+代码123456789101112131415161,"/>
+    
+    
+    
+    
+    <meta property="og:site_name" content="开心小站"/>
+    <meta property="og:type" content="object"/>
+    <meta property="og:title" content="xTable - 开心小站"/>
+    <meta property="og:description" content="开心小站,it,java,vue,
+示例
+代码
+属性
+columns
+action
+formatter 示例
+格式化为文本
+格式化为徽章
+格式化为图片
+
+
+
+
+事件
+方法
+
+示例
+代码123456789101112131415161,"/>
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+    <script>window.searchDbPath = "/search.xml";</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">开心小站</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://itvita.cn"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">xTable</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">xTable</h1>
+        <div class="stuff">
+            <span>十月 09, 2022</span>
+            
+  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/vue/" rel="tag">vue</a></li></ul>
+
+
+        </div>
+        <div class="content markdown">
+            <ol>
+<li><a href="#%E7%A4%BA%E4%BE%8B">示例</a></li>
+<li><a href="#%E4%BB%A3%E7%A0%81">代码</a></li>
+<li><a href="#%E5%B1%9E%E6%80%A7">属性</a><ol>
+<li><a href="#columns">columns</a></li>
+<li><a href="#action">action</a></li>
+<li><a href="#formatter-%E7%A4%BA%E4%BE%8B">formatter 示例</a><ol>
+<li><a href="#%E6%A0%BC%E5%BC%8F%E5%8C%96%E4%B8%BA%E6%96%87%E6%9C%AC">格式化为文本</a></li>
+<li><a href="#%E6%A0%BC%E5%BC%8F%E5%8C%96%E4%B8%BA%E5%BE%BD%E7%AB%A0">格式化为徽章</a></li>
+<li><a href="#%E6%A0%BC%E5%BC%8F%E5%8C%96%E4%B8%BA%E5%9B%BE%E7%89%87">格式化为图片</a></li>
+</ol>
+</li>
+</ol>
+</li>
+<li><a href="#%E4%BA%8B%E4%BB%B6">事件</a></li>
+<li><a href="#%E6%96%B9%E6%B3%95">方法</a></li>
+</ol>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><p><img src="https://cdn.jsdelivr.net/gh/itvita/resources@master/images/202201211649098.png"></p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">x-table</span></span></span><br><span class="line"><span class="tag">     <span class="attr">ref</span>=<span class="string">&quot;myTable&quot;</span></span></span><br><span class="line"><span class="tag">     <span class="attr">title</span>=<span class="string">&quot;菜单列表&quot;</span></span></span><br><span class="line"><span class="tag">     <span class="attr">:columns</span>=<span class="string">&quot;columns&quot;</span></span></span><br><span class="line"><span class="tag">     <span class="attr">:action</span>=<span class="string">&quot;action&quot;</span></span></span><br><span class="line"><span class="tag">     <span class="attr">:expandedRowDetail</span>=<span class="string">&quot;2&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">:scrollX</span>=<span class="string">&quot;1280&quot;</span></span></span><br><span class="line"><span class="tag">     <span class="attr">:scrollY</span>=<span class="string">&quot;300&quot;</span></span></span><br><span class="line"><span class="tag">     <span class="attr">data-url</span>=<span class="string">&quot;https://getman.cn/mock/my/table3&quot;</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">a-space</span> <span class="attr">slot</span>=<span class="string">&quot;tools&quot;</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">a-button</span> <span class="attr">icon</span>=<span class="string">&quot;plus&quot;</span> <span class="attr">type</span>=<span class="string">&quot;primary&quot;</span>&gt;</span></span><br><span class="line">         添加</span><br><span class="line">       <span class="tag">&lt;/<span class="name">a-button</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">a-button</span> <span class="attr">icon</span>=<span class="string">&quot;delete&quot;</span> <span class="attr">type</span>=<span class="string">&quot;danger&quot;</span>&gt;</span></span><br><span class="line">         批量删除</span><br><span class="line">       <span class="tag">&lt;/<span class="name">a-button</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;/<span class="name">a-space</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">x-table</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> columns = [</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">title</span>: <span class="string">&#x27;名称&#x27;</span>,</span><br><span class="line">    <span class="attr">key</span>: <span class="string">&#x27;accountName&#x27;</span>,</span><br><span class="line">    <span class="attr">align</span>: <span class="string">&#x27;left&#x27;</span>,</span><br><span class="line">    <span class="attr">sorter</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">width</span>: <span class="number">180</span>,</span><br><span class="line">    <span class="attr">formatter</span>: &#123; <span class="comment">// 文本格式化显示</span></span><br><span class="line">      <span class="attr">type</span>: <span class="string">&#x27;text&#x27;</span>,</span><br><span class="line">      <span class="attr">format</span>: <span class="function"><span class="params">row</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">          <span class="attr">value</span>: row.<span class="property">accountName</span>, <span class="comment">// 显示文本（必填）</span></span><br><span class="line">          <span class="attr">color</span>: <span class="string">&#x27;#1890ff&#x27;</span>, <span class="comment">// 显示颜色link,error,wain, rgb , hex</span></span><br><span class="line">          <span class="attr">event</span>: <span class="function">() =&gt;</span> &#123; <span class="comment">// 点击触发事件</span></span><br><span class="line">            <span class="variable language_">console</span>.<span class="title function_">log</span>(row.<span class="property">accountName</span>)</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">title</span>: <span class="string">&#x27;状态&#x27;</span>,</span><br><span class="line">    <span class="attr">key</span>: <span class="string">&#x27;state&#x27;</span>,</span><br><span class="line">    <span class="attr">align</span>: <span class="string">&#x27;center&#x27;</span>,</span><br><span class="line">    <span class="attr">sorter</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">width</span>: <span class="number">180</span>,</span><br><span class="line">    <span class="attr">formatter</span>: &#123; <span class="comment">// 文本格式化显示</span></span><br><span class="line">      <span class="attr">type</span>: <span class="string">&#x27;badge&#x27;</span>,</span><br><span class="line">      <span class="attr">format</span>: <span class="function"><span class="params">row</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (row.<span class="property">state</span> === <span class="number">1</span>) &#123;</span><br><span class="line">          <span class="keyword">return</span> &#123;</span><br><span class="line">            <span class="attr">value</span>: <span class="string">&#x27;启用&#x27;</span>, <span class="comment">// 显示文本（必填）</span></span><br><span class="line">            <span class="attr">color</span>: <span class="string">&#x27;blue&#x27;</span>, <span class="comment">// 徽章颜色&#x27;blue&#x27;,&#x27;green&#x27;,&#x27;gray&#x27;,&#x27;orange&#x27;,&#x27;yellow&#x27;,&#x27;red&#x27; 等支持16进制</span></span><br><span class="line">            <span class="attr">event</span>: <span class="function">() =&gt;</span> &#123; <span class="comment">// 点击触发事件</span></span><br><span class="line">              <span class="variable language_">console</span>.<span class="title function_">log</span>(row.<span class="property">state</span>)</span><br><span class="line">            &#125;</span><br><span class="line">          &#125;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          <span class="keyword">return</span> &#123;</span><br><span class="line">            <span class="attr">value</span>: <span class="string">&#x27;禁用&#x27;</span>, <span class="comment">// 显示文本（必填）</span></span><br><span class="line">            <span class="attr">color</span>: <span class="string">&#x27;red&#x27;</span> <span class="comment">// 徽章颜色&#x27;blue&#x27;,&#x27;green&#x27;,&#x27;gray&#x27;,&#x27;orange&#x27;,&#x27;yellow&#x27;,&#x27;red&#x27; 等支持16进制</span></span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">title</span>: <span class="string">&#x27;图片格式化测试&#x27;</span>,</span><br><span class="line">    <span class="attr">key</span>: <span class="string">&#x27;images&#x27;</span>,</span><br><span class="line">    <span class="attr">align</span>: <span class="string">&#x27;left&#x27;</span>,</span><br><span class="line">    <span class="attr">sorter</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">width</span>: <span class="number">180</span>,</span><br><span class="line">    <span class="attr">formatter</span>: &#123;</span><br><span class="line">      <span class="attr">type</span>: <span class="string">&#x27;image&#x27;</span>, <span class="comment">// 格式化方式</span></span><br><span class="line">      <span class="attr">width</span>: <span class="string">&#x27;28px&#x27;</span>, <span class="comment">// 图片显示宽度，不设置默认50px</span></span><br><span class="line">      <span class="attr">height</span>: <span class="string">&#x27;28px&#x27;</span>, <span class="comment">// 图片显示高度，不设置默认50px</span></span><br><span class="line">      <span class="attr">format</span>: <span class="function"><span class="params">row</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> [</span><br><span class="line">          &#123;</span><br><span class="line">            <span class="attr">name</span>: <span class="string">&#x27;图片提示名称&#x27;</span>, <span class="comment">// 名称</span></span><br><span class="line">            <span class="attr">url</span>: <span class="string">&#x27;https://norisk-prod-1305901002.cos.ap-chengdu.myqcloud.com/20220119/014026340563464bb7ee74d653325825.png&#x27;</span> <span class="comment">// 图片路径</span></span><br><span class="line">          &#125;,</span><br><span class="line">          &#123;</span><br><span class="line">            <span class="attr">url</span>: <span class="string">&#x27;https://norisk-prod-1305901002.cos.ap-chengdu.myqcloud.com/20220119/014026340563464bb7ee74d653325825.png&#x27;</span> <span class="comment">// 图片路径</span></span><br><span class="line">          &#125;</span><br><span class="line">        ]</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">title</span>: <span class="string">&#x27;区域名称&#x27;</span>,</span><br><span class="line">    <span class="attr">key</span>: <span class="string">&#x27;areaName&#x27;</span>,</span><br><span class="line">    <span class="attr">align</span>: <span class="string">&#x27;center&#x27;</span>, <span class="comment">// 对齐方式</span></span><br><span class="line">    <span class="attr">sorter</span>: <span class="literal">true</span>, <span class="comment">// 是否可以排序</span></span><br><span class="line">    <span class="attr">width</span>: <span class="number">150</span>, <span class="comment">// 宽度，数字或百分比</span></span><br><span class="line">    <span class="attr">ellipsis</span>: <span class="number">1</span>,</span><br><span class="line">    <span class="attr">hide</span>: <span class="literal">false</span><span class="comment">// 从列表中隐藏该列</span></span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">title</span>: <span class="string">&#x27;时间&#x27;</span>,</span><br><span class="line">    <span class="attr">key</span>: <span class="string">&#x27;createdTime&#x27;</span>,</span><br><span class="line">    <span class="attr">align</span>: <span class="string">&#x27;center&#x27;</span>,</span><br><span class="line">    <span class="attr">width</span>: <span class="number">150</span> <span class="comment">// 宽度，数字或百分比</span></span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">title</span>: <span class="string">&#x27;地址&#x27;</span>,</span><br><span class="line">    <span class="attr">key</span>: <span class="string">&#x27;cmpAddress&#x27;</span>,</span><br><span class="line">    <span class="attr">align</span>: <span class="string">&#x27;left&#x27;</span>,</span><br><span class="line">    <span class="attr">ellipsis</span>: <span class="number">2</span>,</span><br><span class="line">    <span class="attr">width</span>: <span class="number">150</span> <span class="comment">// 宽度，数字或百分比</span></span><br><span class="line">  &#125;</span><br><span class="line">]</span><br><span class="line"><span class="keyword">const</span> action = [</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">title</span>: <span class="string">&#x27;修改&#x27;</span>,</span><br><span class="line">    <span class="attr">icon</span>:<span class="string">&#x27;edit&#x27;</span>,<span class="comment">//显示图标，目前仅支持官方图标库，moren edit</span></span><br><span class="line">    <span class="attr">color</span>: <span class="string">&#x27;link&#x27;</span>, <span class="comment">// 显示颜色link,error,wain, rgb , hex</span></span><br><span class="line">    <span class="attr">permission</span>:<span class="string">&#x27;edit&#x27;</span>,</span><br><span class="line">    <span class="attr">event</span>: <span class="function"><span class="params">row</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(row)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">title</span>: <span class="string">&#x27;删除&#x27;</span>,</span><br><span class="line">    <span class="attr">color</span>: <span class="string">&#x27;error&#x27;</span>, <span class="comment">// 显示颜色link,error,wain, rgb , hex</span></span><br><span class="line">    <span class="attr">event</span>: <span class="function"><span class="params">row</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(row)</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">hidden</span>: <span class="function"><span class="params">row</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(row)</span><br><span class="line">      <span class="keyword">if</span> (row.<span class="property">id</span> % <span class="number">2</span> === <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">      &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">title</span>: <span class="string">&#x27;其他&#x27;</span>,</span><br><span class="line">    <span class="attr">color</span>: <span class="string">&#x27;wain&#x27;</span>, <span class="comment">// 显示颜色link,error,wain, rgb , hex</span></span><br><span class="line">    <span class="attr">event</span>: <span class="function"><span class="params">row</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(row)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">]</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  data () &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      columns,</span><br><span class="line">      action</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  mounted () &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">$refs</span>.<span class="property">myTable</span>.<span class="title function_">search</span>(&#123; <span class="attr">headers</span>: &#123;&#125;, <span class="attr">params</span>: &#123;&#125; &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">methods</span>: &#123;</span><br><span class="line">    search (params) &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(params)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h2><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>title</td>
+<td>列表标题</td>
+<td>String</td>
+<td>查询列表</td>
+</tr>
+<tr>
+<td>columns</td>
+<td>列配置</td>
+<td>Array</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>action</td>
+<td>操作配置</td>
+<td>Array</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>expandedRowDetail</td>
+<td>默认详情操作按钮（0不显示，1显示）</td>
+<td>Number</td>
+<td>0</td>
+</tr>
+<tr>
+<td>rowKey</td>
+<td>行键 同antd-table</td>
+<td>String，function</td>
+<td>id</td>
+</tr>
+<tr>
+<td>selection</td>
+<td>开启选择框 [checkbox,radio]</td>
+<td>String</td>
+<td></td>
+</tr>
+<tr>
+<td>showIndex</td>
+<td>显示序号</td>
+<td>Boolean</td>
+<td>false</td>
+</tr>
+<tr>
+<td>dataUrl</td>
+<td>数据请求地址</td>
+<td>String</td>
+<td></td>
+</tr>
+<tr>
+<td>actionWidth</td>
+<td>操作列宽</td>
+<td>Number</td>
+<td>120</td>
+</tr>
+<tr>
+<td>scrollX</td>
+<td>滚动区域宽</td>
+<td>Number</td>
+<td>960</td>
+</tr>
+<tr>
+<td>scrollY</td>
+<td>滚动区域高</td>
+<td>Number</td>
+<td>800</td>
+</tr>
+<tr>
+<td>data-source</td>
+<td>默认数据</td>
+<td>array</td>
+<td>[]</td>
+</tr>
+</tbody></table>
+<h3 id="columns"><a href="#columns" class="headerlink" title="columns"></a>columns</h3><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+<th>类型</th>
+<th>可选</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>title</td>
+<td>列名称</td>
+<td>String</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>key</td>
+<td>键</td>
+<td>String</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>align</td>
+<td>对齐方式</td>
+<td>String</td>
+<td>left，center,right</td>
+<td>left</td>
+</tr>
+<tr>
+<td>sorter</td>
+<td>是否开启排序</td>
+<td>Boolean</td>
+<td>true，false</td>
+<td>false</td>
+</tr>
+<tr>
+<td>width</td>
+<td>列宽</td>
+<td>Number，String</td>
+<td>像素或百分比</td>
+<td>自适应</td>
+</tr>
+<tr>
+<td>ellipsis</td>
+<td>超出省略</td>
+<td>Number</td>
+<td>设置为0或false则全显</td>
+<td>1</td>
+</tr>
+<tr>
+<td>hide</td>
+<td>隐藏列</td>
+<td>Boolean</td>
+<td></td>
+<td>false</td>
+</tr>
+<tr>
+<td>formatter</td>
+<td>内容格式化</td>
+<td>Object</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="action"><a href="#action" class="headerlink" title="action"></a>action</h3><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+<th>类型</th>
+<th>可选</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>title</td>
+<td>操作名称</td>
+<td>String</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>icon</td>
+<td>显示图标</td>
+<td>String</td>
+<td>antd-icon</td>
+<td></td>
+</tr>
+<tr>
+<td>color</td>
+<td>文字颜色</td>
+<td>String</td>
+<td>显示颜色link,error,wain, rgb , hex</td>
+<td></td>
+</tr>
+<tr>
+<td>permission</td>
+<td>权限标识</td>
+<td>String</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>event</td>
+<td>点击事件</td>
+<td>row&#x3D;&gt;{}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>hidden</td>
+<td>动态隐藏条件</td>
+<td>row&#x3D;&gt;{return true}</td>
+<td></td>
+<td>true</td>
+</tr>
+</tbody></table>
+<h3 id="formatter-示例"><a href="#formatter-示例" class="headerlink" title="formatter 示例"></a>formatter 示例</h3><h4 id="格式化为文本"><a href="#格式化为文本" class="headerlink" title="格式化为文本"></a>格式化为文本</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">formatter</span>: &#123; <span class="comment">// 文本格式化显示</span></span><br><span class="line">      <span class="attr">type</span>: <span class="string">&#x27;text&#x27;</span>,</span><br><span class="line">      <span class="attr">format</span>: <span class="function"><span class="params">row</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">          <span class="attr">value</span>: row.<span class="property">accountName</span>, <span class="comment">// 显示文本（必填）</span></span><br><span class="line">          <span class="attr">color</span>: <span class="string">&#x27;#1890ff&#x27;</span>, <span class="comment">// 显示颜色link,error,wain, rgb , hex</span></span><br><span class="line">          <span class="attr">event</span>: <span class="function">() =&gt;</span> &#123; <span class="comment">// 点击触发事件</span></span><br><span class="line">            <span class="variable language_">console</span>.<span class="title function_">log</span>(row.<span class="property">accountName</span>)</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h4 id="格式化为徽章"><a href="#格式化为徽章" class="headerlink" title="格式化为徽章"></a>格式化为徽章</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">formatter</span>: &#123; <span class="comment">// 文本格式化显示</span></span><br><span class="line">  <span class="attr">type</span>: <span class="string">&#x27;badge&#x27;</span>,</span><br><span class="line">  <span class="attr">format</span>: <span class="function"><span class="params">row</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (row.<span class="property">state</span> === <span class="number">1</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> &#123;</span><br><span class="line">        <span class="attr">value</span>: <span class="string">&#x27;启用&#x27;</span>, <span class="comment">// 显示文本（必填）</span></span><br><span class="line">        <span class="attr">color</span>: <span class="string">&#x27;blue&#x27;</span>, <span class="comment">// 徽章颜色&#x27;blue&#x27;,&#x27;green&#x27;,&#x27;gray&#x27;,&#x27;orange&#x27;,&#x27;yellow&#x27;,&#x27;red&#x27; 等支持16进制</span></span><br><span class="line">        <span class="attr">event</span>: <span class="function">() =&gt;</span> &#123; <span class="comment">// 点击触发事件</span></span><br><span class="line">          <span class="variable language_">console</span>.<span class="title function_">log</span>(row.<span class="property">state</span>)</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> &#123;</span><br><span class="line">        <span class="attr">value</span>: <span class="string">&#x27;禁用&#x27;</span>, <span class="comment">// 显示文本（必填）</span></span><br><span class="line">        <span class="attr">color</span>: <span class="string">&#x27;red&#x27;</span> <span class="comment">// 徽章颜色&#x27;blue&#x27;,&#x27;green&#x27;,&#x27;gray&#x27;,&#x27;orange&#x27;,&#x27;yellow&#x27;,&#x27;red&#x27; 等支持16进制</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="格式化为图片"><a href="#格式化为图片" class="headerlink" title="格式化为图片"></a>格式化为图片</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">formatter</span>: &#123;</span><br><span class="line">      <span class="attr">type</span>: <span class="string">&#x27;image&#x27;</span>, <span class="comment">// 格式化方式</span></span><br><span class="line">      <span class="attr">width</span>: <span class="string">&#x27;28px&#x27;</span>, <span class="comment">// 图片显示宽度，不设置默认50px</span></span><br><span class="line">      <span class="attr">height</span>: <span class="string">&#x27;28px&#x27;</span>, <span class="comment">// 图片显示高度，不设置默认50px</span></span><br><span class="line">      <span class="attr">format</span>: <span class="function"><span class="params">row</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> [</span><br><span class="line">          &#123;</span><br><span class="line">            <span class="attr">name</span>: <span class="string">&#x27;图片提示名称&#x27;</span>, <span class="comment">// 名称</span></span><br><span class="line">            <span class="attr">url</span>: <span class="string">&#x27;https://norisk-prod-1305901002.cos.ap-chengdu.myqcloud.com/20220119/014026340563464bb7ee74d653325825.png&#x27;</span> <span class="comment">// 图片路径</span></span><br><span class="line">          &#125;,</span><br><span class="line">          &#123;</span><br><span class="line">            <span class="attr">url</span>: <span class="string">&#x27;https://norisk-prod-1305901002.cos.ap-chengdu.myqcloud.com/20220119/014026340563464bb7ee74d653325825.png&#x27;</span> <span class="comment">// 图片路径</span></span><br><span class="line">          &#125;</span><br><span class="line">        ]</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h2><table>
+<thead>
+<tr>
+<th>事件名称</th>
+<th>说明</th>
+<th>回调参数</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>rowSelection</td>
+<td>行选择</td>
+<td>function(selectedRowKeys，selectedRows)</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>selectedRowKeys 选中行 key</p>
+</blockquote>
+<blockquote>
+<p>selectedRows 选中行数据</p>
+</blockquote>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><table>
+<thead>
+<tr>
+<th>方法名称</th>
+<th>说明</th>
+<th>举例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>search</td>
+<td>获取查询条件</td>
+<td>this.$refs.myTable.search({ headers: {}, params: {} })</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>headers 主要用于增加token</p>
+</blockquote>
+<blockquote>
+<p>params 搜索条查询条件，或其他来源查询条件，分页排序条件已内置</p>
+</blockquote>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="/music/C400000v9eTA0esGpv.m4a">
+            </audio>
+            
+        </div>
+        
+        
+    <div id="gitalk-container" class="comment link"
+		data-enable="true"
+        data-ae="true"
+        data-ci="d1bce04390a8da2fa2ac"
+        data-cs="7194f621e1c1fa838710abd2a4a7ff05e4e511de"
+        data-r="site"
+        data-o="itvita"
+        data-a="itvita"
+        data-d="true"
+    >查看评论</div>
+
+
+    </div>
+    
+        <div class="side">
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B"><span class="toc-number">1.</span> <span class="toc-text">示例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81"><span class="toc-number">2.</span> <span class="toc-text">代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B1%9E%E6%80%A7"><span class="toc-number">3.</span> <span class="toc-text">属性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#columns"><span class="toc-number">3.1.</span> <span class="toc-text">columns</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#action"><span class="toc-number">3.2.</span> <span class="toc-text">action</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#formatter-%E7%A4%BA%E4%BE%8B"><span class="toc-number">3.3.</span> <span class="toc-text">formatter 示例</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%BC%E5%BC%8F%E5%8C%96%E4%B8%BA%E6%96%87%E6%9C%AC"><span class="toc-number">3.3.1.</span> <span class="toc-text">格式化为文本</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%BC%E5%BC%8F%E5%8C%96%E4%B8%BA%E5%BE%BD%E7%AB%A0"><span class="toc-number">3.3.2.</span> <span class="toc-text">格式化为徽章</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%BC%E5%BC%8F%E5%8C%96%E4%B8%BA%E5%9B%BE%E7%89%87"><span class="toc-number">3.3.3.</span> <span class="toc-text">格式化为图片</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8B%E4%BB%B6"><span class="toc-number">4.</span> <span class="toc-text">事件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%B9%E6%B3%95"><span class="toc-number">5.</span> <span class="toc-text">方法</span></a></li></ol>
+        </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+<script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+        tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno",skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']},
+        TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}" } },
+        messageStyle: "none"
+    });
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+
+</html>

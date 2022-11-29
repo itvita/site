@@ -1,0 +1,1652 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Afd-Lib组件帮助文档 - 开心小站</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="itvita,"> 
+    <meta name="description" content="开心小站,it,java,vue,视频预览列表
+点击播放
+
+示例1234567891011121314151617181920212223242526&amp;lt;template&amp;gt;  &amp;lt;div&amp;gt;    &amp;lt;lz-v,"> 
+    <meta name="author" content="Liu Qiang"> 
+    <link rel="alternative" href="atom.xml" title="开心小站" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+<link rel="stylesheet" href="//unpkg.com/gitalk/dist/gitalk.css">
+
+    
+    
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="Afd-Lib组件帮助文档 - 开心小站"/>
+    <meta name="twitter:description" content="开心小站,it,java,vue,视频预览列表
+点击播放
+
+示例1234567891011121314151617181920212223242526&amp;lt;template&amp;gt;  &amp;lt;div&amp;gt;    &amp;lt;lz-v,"/>
+    
+    
+    
+    
+    <meta property="og:site_name" content="开心小站"/>
+    <meta property="og:type" content="object"/>
+    <meta property="og:title" content="Afd-Lib组件帮助文档 - 开心小站"/>
+    <meta property="og:description" content="开心小站,it,java,vue,视频预览列表
+点击播放
+
+示例1234567891011121314151617181920212223242526&amp;lt;template&amp;gt;  &amp;lt;div&amp;gt;    &amp;lt;lz-v,"/>
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+    <script>window.searchDbPath = "/search.xml";</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">开心小站</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://itvita.cn"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">Afd-Lib组件帮助文档</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">Afd-Lib组件帮助文档</h1>
+        <div class="stuff">
+            <span>十一月 12, 2022</span>
+            
+  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/vue/" rel="tag">vue</a></li></ul>
+
+
+        </div>
+        <div class="content markdown">
+            <h2 id="视频预览列表"><a href="#视频预览列表" class="headerlink" title="视频预览列表"></a>视频预览列表</h2><blockquote>
+<p>点击播放</p>
+</blockquote>
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;lz-video url=&quot;path&quot; :data-list=&quot;videoDataList&quot; /&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">  data () &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      videoDataList: [</span><br><span class="line">        &#123;</span><br><span class="line">          path: &#x27;http://127.0.0.1:8080/1.mp4&#x27;</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">          path: &#x27;http://127.0.0.1:8080/3.mp4&#x27;</span><br><span class="line">        &#125;</span><br><span class="line">      ]</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  created () &#123;&#125;,</span><br><span class="line">  mounted () &#123;&#125;,</span><br><span class="line">  methods: &#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;style&gt;&lt;/style&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="属性说明"><a href="#属性说明" class="headerlink" title="属性说明"></a>属性说明</h3><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>url</td>
+<td>dataList 中视频访问地址key</td>
+<td>String</td>
+<td>path</td>
+</tr>
+<tr>
+<td>dataList</td>
+<td>视频列表</td>
+<td>Array</td>
+<td></td>
+</tr>
+<tr>
+<td>baseUrl</td>
+<td>url跟地址</td>
+<td>String</td>
+<td>‘’</td>
+</tr>
+</tbody></table>
+<h2 id="基础上传按钮"><a href="#基础上传按钮" class="headerlink" title="基础上传按钮"></a>基础上传按钮</h2><blockquote>
+<p>一般用于工具条，不回显上传结果。</p>
+</blockquote>
+<h3 id="示例-1"><a href="#示例-1" class="headerlink" title="示例"></a>示例</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;lz-btn-upload</span><br><span class="line">      @beforeUpload=&quot;beforeUpload&quot;</span><br><span class="line">      @doneUpload=&quot;doneUpload&quot;</span><br><span class="line">      label=&quot;导入&quot;</span><br><span class="line">      accept=&quot;.xlsx,.xls&quot;</span><br><span class="line">      action=&quot;http://localhost:8102/base/common/upload/image&quot;</span><br><span class="line">    /&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">  export default &#123;</span><br><span class="line">    data () &#123;</span><br><span class="line">      return &#123;&#125;</span><br><span class="line">    &#125;,</span><br><span class="line">  created () &#123;&#125;,</span><br><span class="line">  mounted () &#123;&#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    beforeUpload (values) &#123;</span><br><span class="line">      console.log(&#x27;导入前&#x27;, values)</span><br><span class="line">    &#125;,</span><br><span class="line">    doneUpload (values) &#123;</span><br><span class="line">      console.log(&#x27;导入后&#x27;, values)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;style&gt;&lt;/style&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h3><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>label</td>
+<td>组件名称</td>
+<td>String</td>
+<td>导入</td>
+</tr>
+<tr>
+<td>size</td>
+<td>允许上传文件大小 单位MB</td>
+<td>Number</td>
+<td>2</td>
+</tr>
+<tr>
+<td>accept</td>
+<td>允许上传文件类型</td>
+<td>String</td>
+<td></td>
+</tr>
+<tr>
+<td>action</td>
+<td>文件上传路径</td>
+<td>String</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h3><table>
+<thead>
+<tr>
+<th>事件名称</th>
+<th>说明</th>
+<th>回调参数</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>beforeUpload</td>
+<td>文件开始上传前调用</td>
+<td>function(values)</td>
+</tr>
+<tr>
+<td>doneUpload</td>
+<td>文件上传完成后调用</td>
+<td>function(values)</td>
+</tr>
+</tbody></table>
+<h3 id="values说明"><a href="#values说明" class="headerlink" title="values说明"></a>values说明</h3><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">		file<span class="punctuation">:</span>File<span class="punctuation">,</span></span><br><span class="line">		id<span class="punctuation">:</span> <span class="string">&quot;1qgc04h0lsclr7bhtcby&quot;</span></span><br><span class="line">    name<span class="punctuation">:</span> <span class="string">&quot;文件名.xlsx&quot;</span></span><br><span class="line">    original<span class="punctuation">:</span> <span class="string">&quot;源文件路径&quot;</span></span><br><span class="line">    path<span class="punctuation">:</span> <span class="string">&quot;压缩文件路径&quot;</span></span><br><span class="line">    state<span class="punctuation">:</span> <span class="number">2</span> <span class="comment">//状态，1开始上传，2上传成功，3上传失败</span></span><br><span class="line">	<span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="文件上传"><a href="#文件上传" class="headerlink" title="文件上传"></a>文件上传</h2><blockquote>
+<p>常用于表单，可以预览，下载。</p>
+</blockquote>
+<h3 id="示例-2"><a href="#示例-2" class="headerlink" title="示例"></a>示例</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;lz-upload</span><br><span class="line">      v-model=&quot;uploadList&quot;</span><br><span class="line">      :max-num=&quot;5&quot;</span><br><span class="line">      :size=&quot;5&quot;</span><br><span class="line">      @change=&quot;change&quot;</span><br><span class="line">      @beforeUpload=&quot;beforeUpload&quot;</span><br><span class="line">      @doneUpload=&quot;doneUpload&quot;</span><br><span class="line">      accept=&quot;.jpg,.png,.xlsx,.doc,.docx&quot;</span><br><span class="line">      :disabled=&quot;false&quot;</span><br><span class="line">      basePath=&quot;https://echftp.yqzhfw.com/&quot;</span><br><span class="line">      action=&quot;https://jmy.yqzhfw.com/train/api/base-server/base/common/upload/image&quot;</span><br><span class="line">      :replaceFields=&quot;&#123;</span><br><span class="line">        name: &#x27;name&#x27;,</span><br><span class="line">        path: &#x27;path&#x27;,</span><br><span class="line">        original: &#x27;original&#x27;,</span><br><span class="line">        size: &#x27;size&#x27;,</span><br><span class="line">        suffix: &#x27;suffix&#x27;,</span><br><span class="line">      &#125;&quot;</span><br><span class="line">      :showDownload=&quot;true&quot;</span><br><span class="line">    /&gt;</span><br><span class="line">    &lt;!-- :step=&quot;&#123; size: 2048 &#125;&quot; --&gt;</span><br><span class="line"></span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">  data () &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      uploadList: [</span><br><span class="line">        // &#123;</span><br><span class="line">        //   name: &quot;音频服务.png&quot;,</span><br><span class="line">        //   path: &quot;/basis/2020/7/10/13acde2b08e84fc7bae4e9c0195facfc.png&quot;,</span><br><span class="line">        // &#125;,</span><br><span class="line">      ]</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    change (param) &#123;</span><br><span class="line">      console.log(&#x27;change&#x27;, param)</span><br><span class="line">    &#125;,</span><br><span class="line">    beforeUpload (param) &#123;</span><br><span class="line">      console.log(&#x27;beforeUpload&#x27;, param)</span><br><span class="line">    &#125;,</span><br><span class="line">    doneUpload (param) &#123;</span><br><span class="line">      console.log(&#x27;doneUpload&#x27;, param)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="属性-1"><a href="#属性-1" class="headerlink" title="属性"></a>属性</h3><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>value(v-model)</td>
+<td>设置上传文件默认值</td>
+<td>Array</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>max-num</td>
+<td>允许最大文件数</td>
+<td>Number</td>
+<td>0</td>
+</tr>
+<tr>
+<td>size</td>
+<td>单位MB</td>
+<td>Number</td>
+<td>2</td>
+</tr>
+<tr>
+<td>accept</td>
+<td>允许上传文件类型</td>
+<td>String</td>
+<td>几乎所有文件</td>
+</tr>
+<tr>
+<td>disabled</td>
+<td>是否禁用</td>
+<td>boolean</td>
+<td>false</td>
+</tr>
+<tr>
+<td>imgBasePath</td>
+<td>文件访问跟路径</td>
+<td>String</td>
+<td></td>
+</tr>
+<tr>
+<td>action</td>
+<td>文件上传路径</td>
+<td>String</td>
+<td></td>
+</tr>
+<tr>
+<td>replaceFields</td>
+<td>结果 key替换</td>
+<td>Object</td>
+<td>{<br/>          name: ‘name’,<br/>          path: ‘path’,<br/>          original: ‘original’,<br/>          size: ‘size’,<br/>          suffix: ‘suffix’,<br/>  }</td>
+</tr>
+<tr>
+<td>step</td>
+<td>开启分片上传</td>
+<td>Object</td>
+<td>false</td>
+</tr>
+</tbody></table>
+<h3 id="step说明"><a href="#step说明" class="headerlink" title="step说明"></a>step说明</h3><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>size</td>
+<td>分片大小，单位kb</td>
+<td>Number</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<h3 id="事件-1"><a href="#事件-1" class="headerlink" title="事件"></a>事件</h3><table>
+<thead>
+<tr>
+<th>事件名称</th>
+<th>说明</th>
+<th>回调参数</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>change</td>
+<td>文件发生改变后调用</td>
+<td>values</td>
+</tr>
+<tr>
+<td>beforeUpload</td>
+<td>文件上传前回调</td>
+<td>values</td>
+</tr>
+<tr>
+<td>doneUpload</td>
+<td>文件上传结束回调</td>
+<td>values</td>
+</tr>
+</tbody></table>
+<h3 id="values举例"><a href="#values举例" class="headerlink" title="values举例"></a>values举例</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[&#123;</span><br><span class="line">   name: &quot;音频服务.png&quot;,</span><br><span class="line">   path: &quot;/basis/2020/7/10/13acde2b08e84fc7bae4e9c0195facfc.png&quot;,</span><br><span class="line">&#125;]</span><br></pre></td></tr></table></figure>
+
+<h2 id="树形下拉"><a href="#树形下拉" class="headerlink" title="树形下拉"></a>树形下拉</h2><h3 id="示例-3"><a href="#示例-3" class="headerlink" title="示例"></a>示例</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;lz-tree-select</span><br><span class="line">      ref=&quot;dTreeSelect&quot;</span><br><span class="line">      :replaceFields=&quot;&#123;</span><br><span class="line">        key: &#x27;id&#x27;,</span><br><span class="line">        value: &#x27;value&#x27;,</span><br><span class="line">        title: &#x27;title&#x27;,</span><br><span class="line">        children: &#x27;children&#x27;,</span><br><span class="line">      &#125;&quot;</span><br><span class="line">      v-model=&quot;treeSelect&quot;</span><br><span class="line">      @change=&quot;change&quot;</span><br><span class="line">      :multiple=&quot;false&quot;</span><br><span class="line">    /&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">  data () &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      treeSelect: [&#x27;0-0&#x27;, &#x27;0-0-1&#x27;]</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  created () &#123;&#125;,</span><br><span class="line">  mounted () &#123;</span><br><span class="line">    this.$refs.dTreeSelect.init([</span><br><span class="line">        &#123;</span><br><span class="line">          title: &#x27;Node1&#x27;,</span><br><span class="line">          value: &#x27;0-0&#x27;,</span><br><span class="line">          id: &#x27;0-0&#x27;,</span><br><span class="line">          children: [</span><br><span class="line">            &#123;</span><br><span class="line">              value: &#x27;0-0-1&#x27;,</span><br><span class="line">              id: &#x27;0-0-1&#x27;,</span><br><span class="line">              title: &#x27;title&#x27;</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">              title: &#x27;Child Node2&#x27;,</span><br><span class="line">              value: &#x27;0-0-2&#x27;,</span><br><span class="line">              id: &#x27;0-0-2&#x27;</span><br><span class="line">            &#125;</span><br><span class="line">          ]</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">          title: &#x27;Node2&#x27;,</span><br><span class="line">          value: &#x27;0-1&#x27;,</span><br><span class="line">          id: &#x27;0-1&#x27;</span><br><span class="line">        &#125;</span><br><span class="line">      ])</span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    change (val) &#123;</span><br><span class="line">      console.log(val)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;style&gt;&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="属性-2"><a href="#属性-2" class="headerlink" title="属性"></a>属性</h3><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>replaceFields</td>
+<td>替换结果集中key，value,title，children为对应字段</td>
+<td>Object</td>
+<td>{<br/>       key: ‘key’,<br/>        value:’value’,<br>         title: ‘title’,<br/>         children: ‘children’<br/>   }</td>
+</tr>
+<tr>
+<td>v-model(value)</td>
+<td>绑定值单选时String ，多选时 Array</td>
+<td>String&#x2F;Array</td>
+<td></td>
+</tr>
+<tr>
+<td>multiple</td>
+<td>是否开启多选</td>
+<td>Boolean</td>
+<td>false</td>
+</tr>
+<tr>
+<td>asyncLoad</td>
+<td>异步加载数据</td>
+<td>function（node）</td>
+<td>-</td>
+</tr>
+</tbody></table>
+<h3 id="asyncLoad说明"><a href="#asyncLoad说明" class="headerlink" title="asyncLoad说明"></a>asyncLoad说明</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">asyncLoad (&#123; id &#125;) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">this</span>.$axios(&#123;</span><br><span class="line">      <span class="attr">url</span>: <span class="string">&#x27;http://localhost:7001/api/xxx/getTree&#x27;</span>,</span><br><span class="line">      <span class="attr">params</span>: &#123; <span class="attr">pid</span>: id &#125;</span><br><span class="line">      &#125;).<span class="title function_">then</span>(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">      	<span class="title function_">resolve</span>(res.<span class="property">data</span>)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+<th>举例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>init</td>
+<td>数据初始化</td>
+<td>this.$refs.dTreeSelect.init([]) &#x2F;&#x2F;初始化一个空数组</td>
+</tr>
+</tbody></table>
+<h3 id="事件-2"><a href="#事件-2" class="headerlink" title="事件"></a>事件</h3><table>
+<thead>
+<tr>
+<th>事件名称</th>
+<th>说明</th>
+<th>回调参数</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>change</td>
+<td>选中值改变触发</td>
+<td>function(value)</td>
+</tr>
+</tbody></table>
+<h2 id="树形"><a href="#树形" class="headerlink" title="树形"></a>树形</h2><h3 id="示例-4"><a href="#示例-4" class="headerlink" title="示例"></a>示例</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;lz-tree</span><br><span class="line">      ref=&quot;dTree&quot;</span><br><span class="line">      :replaceFields=&quot;&#123;</span><br><span class="line">        key: &#x27;key&#x27;,</span><br><span class="line">        title: &#x27;title&#x27;,</span><br><span class="line">        children: &#x27;children&#x27;,</span><br><span class="line">      &#125;&quot;</span><br><span class="line">      @click=&quot;nodeClick&quot;</span><br><span class="line">      :asyncLoad=&quot;false&quot;</span><br><span class="line">    &gt;</span><br><span class="line">    &lt;/d-tree&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">  data () &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      treeData: [</span><br><span class="line">        &#123;</span><br><span class="line">          title: &#x27;Node1&#x27;,</span><br><span class="line">          value: &#x27;0-0&#x27;,</span><br><span class="line">          key: &#x27;0-0&#x27;,</span><br><span class="line">          children: [</span><br><span class="line">            &#123;</span><br><span class="line">              value: &#x27;0-0-1&#x27;,</span><br><span class="line">              key: &#x27;0-0-1&#x27;,</span><br><span class="line">              title: &#x27;title&#x27;</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">              title: &#x27;Child Node2&#x27;,</span><br><span class="line">              value: &#x27;0-0-2&#x27;,</span><br><span class="line">              key: &#x27;0-0-2&#x27;</span><br><span class="line">            &#125;</span><br><span class="line">          ]</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">          title: &#x27;Node2&#x27;,</span><br><span class="line">          value: &#x27;0-1&#x27;,</span><br><span class="line">          key: &#x27;0-1&#x27;</span><br><span class="line">        &#125;</span><br><span class="line">      ]</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  created () &#123;&#125;,</span><br><span class="line">  mounted () &#123;</span><br><span class="line">    this.$refs.dTree.init(this.treeData)</span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    nodeClick (param) &#123;</span><br><span class="line">      console.log(param)</span><br><span class="line">    &#125;,</span><br><span class="line">    asyncLoad (&#123; id &#125;) &#123;</span><br><span class="line">      return new Promise((resolve) =&gt; &#123;</span><br><span class="line">        this.$axios(&#123;</span><br><span class="line">          url: &#x27;http://localhost:7001/api/xxx/getTree&#x27;,</span><br><span class="line">          params: &#123; pid: id &#125;</span><br><span class="line">        &#125;).then((res) =&gt; &#123;</span><br><span class="line">          resolve(res.data) // 子节点数据 []</span><br><span class="line">        &#125;)</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;,</span><br><span class="line">    refresh () &#123;</span><br><span class="line">      this.$refs.dTree.refreshByPid(0, function () &#123;</span><br><span class="line">        console.log(&#x27;刷新完成&#x27;)</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;style&gt;&lt;/style&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="属性-3"><a href="#属性-3" class="headerlink" title="属性"></a>属性</h3><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>replaceFields</td>
+<td>替换结果集中key，title，children为对应字段</td>
+<td>Object</td>
+<td>{<br/>       key: ‘key’,<br/>        title: ‘title’,<br/>         children: ‘children’<br/>   }</td>
+</tr>
+<tr>
+<td>asyncLoad</td>
+<td>异步加载数据 （不需要异步可不配置）</td>
+<td>function（node）</td>
+<td>-</td>
+</tr>
+</tbody></table>
+<h3 id="事件-3"><a href="#事件-3" class="headerlink" title="事件"></a>事件</h3><table>
+<thead>
+<tr>
+<th>事件名称</th>
+<th>说明</th>
+<th>回调参数</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>click</td>
+<td>节点点击事件</td>
+<td>function(value)</td>
+</tr>
+</tbody></table>
+<h3 id="方法-1"><a href="#方法-1" class="headerlink" title="方法"></a>方法</h3><table>
+<thead>
+<tr>
+<th>方法名称</th>
+<th>参数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>init</td>
+<td>树形数组</td>
+<td>初始化数据，异步时可以传空数组[]</td>
+</tr>
+<tr>
+<td>refreshByPid</td>
+<td>id,callback</td>
+<td>要刷新的节点ID，刷新完成回调</td>
+</tr>
+</tbody></table>
+<h2 id="时间选择器"><a href="#时间选择器" class="headerlink" title="时间选择器"></a>时间选择器</h2><h3 id="示例-5"><a href="#示例-5" class="headerlink" title="示例"></a>示例</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;lz-time-picker v-model=&quot;timePicker&quot; @change=&quot;change&quot;&gt;&lt;/d-time-picker&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">  export default &#123;</span><br><span class="line">    data () &#123;</span><br><span class="line">      return &#123;</span><br><span class="line">        timePicker: &#x27;&#x27;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">  created () &#123;&#125;,</span><br><span class="line">  mounted () &#123;&#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    change (value) &#123;</span><br><span class="line">      console.log(value)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;style&gt;&lt;/style&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="属性-4"><a href="#属性-4" class="headerlink" title="属性"></a>属性</h3><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>v-model(value)</td>
+<td>绑定值</td>
+<td>String</td>
+<td>‘’</td>
+</tr>
+<tr>
+<td>allowClear</td>
+<td>是否显示清空按钮</td>
+<td>Boolean</td>
+<td>false</td>
+</tr>
+<tr>
+<td>disabled</td>
+<td>是否禁用</td>
+<td>Boolean</td>
+<td>false</td>
+</tr>
+<tr>
+<td>format</td>
+<td>日期格式</td>
+<td>String</td>
+<td>HH:mm:ss</td>
+</tr>
+<tr>
+<td>hourStep</td>
+<td>小时选项间隔</td>
+<td>Number</td>
+<td>1</td>
+</tr>
+<tr>
+<td>minuteStep</td>
+<td>分钟选项间隔</td>
+<td>Number</td>
+<td>1</td>
+</tr>
+<tr>
+<td>secondStep</td>
+<td>秒选项间隔</td>
+<td>Number</td>
+<td>1</td>
+</tr>
+<tr>
+<td>placeholder</td>
+<td>没有值的时候显示的内容</td>
+<td>String</td>
+<td>‘’</td>
+</tr>
+<tr>
+<td>size</td>
+<td>文本框大小[large,default,small]</td>
+<td>String</td>
+<td>default</td>
+</tr>
+<tr>
+<td>inputReadOnly</td>
+<td>设置输入框为只读（避免在移动设备上打开虚拟键盘)</td>
+<td>Boolean</td>
+<td>true</td>
+</tr>
+</tbody></table>
+<h3 id="事件-4"><a href="#事件-4" class="headerlink" title="事件"></a>事件</h3><table>
+<thead>
+<tr>
+<th>事件名称</th>
+<th>说明</th>
+<th>回调参数</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>change</td>
+<td>值改变事件</td>
+<td>function(value)</td>
+</tr>
+</tbody></table>
+<h2 id="文本显示"><a href="#文本显示" class="headerlink" title="文本显示"></a>文本显示</h2><h3 id="示例-6"><a href="#示例-6" class="headerlink" title="示例"></a>示例</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;lz-text value=&quot;测试&quot; color=&quot;primary&quot; @click=&quot;handelClick&quot; /&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">  components: &#123;&#125;,</span><br><span class="line">  data () &#123;</span><br><span class="line">    return &#123;&#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  created () &#123;&#125;,</span><br><span class="line">  mounted () &#123;&#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    handelClick (value) &#123;</span><br><span class="line">      console.log(value)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;style&gt;&lt;/style&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="属性-5"><a href="#属性-5" class="headerlink" title="属性"></a>属性</h3><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>value</td>
+<td>显示值</td>
+<td>String</td>
+<td>‘’</td>
+</tr>
+<tr>
+<td>color</td>
+<td>显示颜色【primary,success,warning,error】</td>
+<td>String</td>
+<td>default</td>
+</tr>
+</tbody></table>
+<h3 id="事件-5"><a href="#事件-5" class="headerlink" title="事件"></a>事件</h3><table>
+<thead>
+<tr>
+<th>事件名称</th>
+<th>说明</th>
+<th>回调参数</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>click</td>
+<td>点击事件</td>
+<td>function(value)</td>
+</tr>
+</tbody></table>
+<h2 id="table表格"><a href="#table表格" class="headerlink" title="table表格"></a>table表格</h2><h3 id="示例-7"><a href="#示例-7" class="headerlink" title="示例"></a>示例</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;lz-table ref=&quot;myTable&quot;&gt;</span><br><span class="line">      &lt;div slot=&quot;tools&quot;&gt;</span><br><span class="line">        &lt;a-button icon=&quot;plus&quot; @click=&quot;getSelect&quot; type=&quot;primary&quot;&gt;获取选中项id&lt;/a-button&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    &lt;/d-table&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">  data () &#123;</span><br><span class="line">    return &#123;&#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  created () &#123;&#125;,</span><br><span class="line">  mounted () &#123;</span><br><span class="line">    this.tableInit()</span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    search (param) &#123;</span><br><span class="line">      this.$refs.myTable.search(param)</span><br><span class="line">    &#125;,</span><br><span class="line">    tableInit () &#123;</span><br><span class="line">      this.$refs.myTable.init(</span><br><span class="line">        &#123;</span><br><span class="line">          url: &#x27;http://localhost:9001/xxxx/getList&#x27;,</span><br><span class="line">          columns: [</span><br><span class="line">            &#123;</span><br><span class="line">              field: &#x27;title&#x27;,</span><br><span class="line">              title: &#x27;名称&#x27;,</span><br><span class="line">              sorter: &#x27;true&#x27;,</span><br><span class="line">              align: &#x27;left&#x27;,</span><br><span class="line">              width: 150</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">              field: &#x27;path&#x27;,</span><br><span class="line">              title: &#x27;路由/权限&#x27;,</span><br><span class="line">              align: &#x27;left&#x27;,</span><br><span class="line">              width: 150</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">              field: &#x27;icons&#x27;,</span><br><span class="line">              title: &#x27;图标&#x27;,</span><br><span class="line">              align: &#x27;left&#x27;,</span><br><span class="line">              width: 100,</span><br><span class="line">              hidden: true</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">              field: &#x27;menuType&#x27;,</span><br><span class="line">              title: &#x27;类型&#x27;,</span><br><span class="line">              sorter: &#x27;true&#x27;,</span><br><span class="line">              align: &#x27;center&#x27;,</span><br><span class="line">              width: 80,</span><br><span class="line">              formatter: &#123;</span><br><span class="line">                type: &#x27;text&#x27;,</span><br><span class="line">                format: (row) =&gt; &#123;</span><br><span class="line">                  if (row.menuType === 0) &#123;</span><br><span class="line">                    return &#123;</span><br><span class="line">                      value: &#x27;目录&#x27;</span><br><span class="line">                    &#125;</span><br><span class="line">                  &#125; else if (row.menuType === 1) &#123;</span><br><span class="line">                    return &#123;</span><br><span class="line">                      value: &#x27;菜单&#x27;</span><br><span class="line">                    &#125;</span><br><span class="line">                  &#125; else if (row.menuType === 2) &#123;</span><br><span class="line">                    return &#123;</span><br><span class="line">                      value: &#x27;按钮&#x27;</span><br><span class="line">                    &#125;</span><br><span class="line">                  &#125; else &#123;</span><br><span class="line">                    return &#123;</span><br><span class="line">                      value: &#x27;-&#x27;</span><br><span class="line">                    &#125;</span><br><span class="line">                  &#125;</span><br><span class="line">                &#125;</span><br><span class="line">              &#125;</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">              field: &#x27;seq&#x27;,</span><br><span class="line">              title: &#x27;顺序号&#x27;,</span><br><span class="line">              sorter: &#x27;true&#x27;,</span><br><span class="line">              align: &#x27;right&#x27;,</span><br><span class="line">              width: 120</span><br><span class="line">            &#125;</span><br><span class="line">          ],</span><br><span class="line">          operate: &#123;</span><br><span class="line">            items: [</span><br><span class="line">              &#123;</span><br><span class="line">                label: &#x27;编辑&#x27;,</span><br><span class="line">                color: &#x27;primary&#x27;,</span><br><span class="line">                event: (row) =&gt; &#123;</span><br><span class="line">                  console.log(row)</span><br><span class="line">                &#125;</span><br><span class="line">              &#125;,</span><br><span class="line">              &#123;</span><br><span class="line">                label: &#x27;删除&#x27;,</span><br><span class="line">                color: &#x27;danger&#x27;,</span><br><span class="line">                event: (row) =&gt; &#123;</span><br><span class="line">                  this.$confirm(&#123;</span><br><span class="line">                    title: &#x27;确认删除？&#x27;,</span><br><span class="line">                    content: &#x27;删除后将无法恢复！&#x27;,</span><br><span class="line">                    onOk: () =&gt; &#123;</span><br><span class="line">                      console.log(row)</span><br><span class="line">                    &#125;</span><br><span class="line">                  &#125;)</span><br><span class="line">                &#125;</span><br><span class="line">              &#125;</span><br><span class="line">            ]</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        () =&gt; &#123;</span><br><span class="line">          this.search()</span><br><span class="line">        &#125;</span><br><span class="line">      )</span><br><span class="line">    &#125;,</span><br><span class="line">    getSelect () &#123;</span><br><span class="line">      console.log(this.$refs.myTable.getSelected())</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;style&gt;&lt;/style&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="属性-6"><a href="#属性-6" class="headerlink" title="属性"></a>属性</h3><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+<th>是否必填</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>url</td>
+<td>请求链接</td>
+<td>是</td>
+<td>String</td>
+<td></td>
+</tr>
+<tr>
+<td>method</td>
+<td>请求方式</td>
+<td>否</td>
+<td>post&#x2F;get</td>
+<td>get</td>
+</tr>
+<tr>
+<td>pagination</td>
+<td>是否显示分页</td>
+<td>否</td>
+<td>boolean</td>
+<td>true</td>
+</tr>
+<tr>
+<td>queryParams</td>
+<td>默认参数</td>
+<td>否</td>
+<td>Object</td>
+<td>{}</td>
+</tr>
+<tr>
+<td>pageNumber</td>
+<td>初始化加载第一页，默认第一页</td>
+<td>否</td>
+<td>Number</td>
+<td>1</td>
+</tr>
+<tr>
+<td>pageSize</td>
+<td>每页的记录行数（*）</td>
+<td>否</td>
+<td>Number</td>
+<td>10</td>
+</tr>
+<tr>
+<td>pageList</td>
+<td>可供选择的每页的行数</td>
+<td>否</td>
+<td>Array</td>
+<td>[10, 25, 50, 100]</td>
+</tr>
+<tr>
+<td>showColumns</td>
+<td>是否显示所有的列</td>
+<td>否</td>
+<td>boolean</td>
+<td>true</td>
+</tr>
+<tr>
+<td>showRefresh</td>
+<td>是否显示刷新按钮</td>
+<td>否</td>
+<td>boolean</td>
+<td>true</td>
+</tr>
+<tr>
+<td>changeSize</td>
+<td>允许改变列大小</td>
+<td>否</td>
+<td>boolean</td>
+<td>true</td>
+</tr>
+<tr>
+<td>showCheckBox</td>
+<td>显示复选框</td>
+<td>否</td>
+<td>boolean</td>
+<td>false</td>
+</tr>
+<tr>
+<td>showIndex</td>
+<td>显示序号</td>
+<td>否</td>
+<td>boolean</td>
+<td>true</td>
+</tr>
+<tr>
+<td>height</td>
+<td>行高，如果没有设置height属性，表格自动根据记录条数设置表格高度</td>
+<td>否</td>
+<td>Number</td>
+<td>500</td>
+</tr>
+<tr>
+<td>columns</td>
+<td>定义列</td>
+<td>是</td>
+<td>Array</td>
+<td></td>
+</tr>
+<tr>
+<td>operate</td>
+<td>定义操作</td>
+<td>否</td>
+<td>Object</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="columns"><a href="#columns" class="headerlink" title="columns"></a>columns</h3><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+<th>是否必填</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>field</td>
+<td>字段名</td>
+<td>是</td>
+<td>String</td>
+<td>-</td>
+</tr>
+<tr>
+<td>title</td>
+<td>显示名</td>
+<td>是</td>
+<td>String</td>
+<td>-</td>
+</tr>
+<tr>
+<td>sorter</td>
+<td>是否可以排序</td>
+<td>否</td>
+<td>Boolean</td>
+<td>false</td>
+</tr>
+<tr>
+<td>width</td>
+<td>宽度 ，不配置则自适应宽度</td>
+<td>否</td>
+<td>Integer</td>
+<td>自适应</td>
+</tr>
+<tr>
+<td>align</td>
+<td>对齐方式 可选：left center right</td>
+<td>否</td>
+<td>String</td>
+<td>left</td>
+</tr>
+<tr>
+<td>hidden</td>
+<td>是否隐藏</td>
+<td>否</td>
+<td>Boolean</td>
+<td>false</td>
+</tr>
+<tr>
+<td>formatter</td>
+<td>如下示例 ：</td>
+<td>否</td>
+<td>Object</td>
+<td>-</td>
+</tr>
+</tbody></table>
+<h3 id="columns列配置示例"><a href="#columns列配置示例" class="headerlink" title="columns列配置示例"></a>columns列配置示例</h3><h4 id="基本配置"><a href="#基本配置" class="headerlink" title="基本配置"></a>基本配置</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">field</span>: <span class="string">&#x27;title&#x27;</span>, <span class="comment">//字段名</span></span><br><span class="line">    <span class="attr">title</span>: <span class="string">&#x27;标签名称&#x27;</span>, <span class="comment">//显示名</span></span><br><span class="line">    <span class="attr">sorter</span>: <span class="literal">true</span>, <span class="comment">//是否可以排序</span></span><br><span class="line">    <span class="attr">width</span>:<span class="number">200</span>,<span class="comment">//宽度 ，不配置则自适应宽度</span></span><br><span class="line">    <span class="attr">align</span>: <span class="string">&#x27;left&#x27;</span>,<span class="comment">//对齐方式 可选：left center right</span></span><br><span class="line">    <span class="attr">hidden</span>: <span class="literal">false</span></span><br><span class="line">  &#125;,</span><br><span class="line">  。。。</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+<h4 id="格式化文本"><a href="#格式化文本" class="headerlink" title="格式化文本"></a>格式化文本</h4><blockquote>
+<p>多用于标题，可通过点击事件查看详情</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">field</span>: <span class="string">&#x27;title&#x27;</span>,</span><br><span class="line">  <span class="attr">title</span>: <span class="string">&#x27;名称&#x27;</span>,</span><br><span class="line">  <span class="attr">sorter</span>: <span class="string">&#x27;true&#x27;</span>,</span><br><span class="line">  <span class="attr">align</span>: <span class="string">&#x27;left&#x27;</span>,</span><br><span class="line">  <span class="attr">width</span>: <span class="number">100</span>,</span><br><span class="line">  <span class="attr">formatter</span>: &#123;</span><br><span class="line">    <span class="attr">type</span>: <span class="string">&#x27;text&#x27;</span>, <span class="comment">//格式化方式</span></span><br><span class="line">    <span class="attr">format</span>: <span class="function"><span class="params">row</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      <span class="attr">value</span>: row.<span class="property">title</span>, <span class="comment">//显示文本（必填）</span></span><br><span class="line">      <span class="attr">color</span>: <span class="string">&#x27;primary&#x27;</span>, <span class="comment">// 显示颜色 &#x27;primary&#x27;,&#x27;danger&#x27;,&#x27;success&#x27;,&#x27;warning&#x27;,&#x27;info&#x27;,&#x27;default&#x27;</span></span><br><span class="line">      <span class="attr">event</span>:<span class="function">()=&gt;</span>&#123; <span class="comment">// 点击触发事件</span></span><br><span class="line">        	<span class="comment">// ...</span></span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="格式化显示图片"><a href="#格式化显示图片" class="headerlink" title="格式化显示图片"></a>格式化显示图片</h4><blockquote>
+<p>可用于头像等需要显示图片的列</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">field</span>: <span class="string">&#x27;headImage&#x27;</span>,</span><br><span class="line">  <span class="attr">title</span>: <span class="string">&#x27;状态&#x27;</span>,</span><br><span class="line">  <span class="attr">sorter</span>: <span class="string">&#x27;true&#x27;</span>,</span><br><span class="line">  <span class="attr">align</span>: <span class="string">&#x27;center&#x27;</span>,</span><br><span class="line">  <span class="attr">width</span>: <span class="number">100</span>,</span><br><span class="line">  <span class="attr">formatter</span>: &#123;</span><br><span class="line">   <span class="attr">type</span>: <span class="string">&#x27;image&#x27;</span>, <span class="comment">//格式化方式</span></span><br><span class="line">   <span class="attr">format</span>: <span class="function"><span class="params">row</span> =&gt;</span> &#123;</span><br><span class="line">     <span class="keyword">return</span> &#123;</span><br><span class="line">      <span class="attr">name</span>:<span class="string">&#x27;&#x27;</span>,<span class="comment">// 名称</span></span><br><span class="line">      <span class="attr">url</span>:<span class="string">&#x27;&#x27;</span>  <span class="comment">// 图片路径</span></span><br><span class="line">     &#125;</span><br><span class="line">   &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="格式化为图文"><a href="#格式化为图文" class="headerlink" title="格式化为图文"></a>格式化为图文</h4><blockquote>
+<p>同上，但图片右侧可配置显示的文字</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">field</span>: <span class="string">&#x27;name&#x27;</span>,</span><br><span class="line">  <span class="attr">title</span>: <span class="string">&#x27;状态&#x27;</span>,</span><br><span class="line">  <span class="attr">sorter</span>: <span class="string">&#x27;true&#x27;</span>,</span><br><span class="line">  <span class="attr">align</span>: <span class="string">&#x27;center&#x27;</span>,</span><br><span class="line">  <span class="attr">width</span>: <span class="number">100</span>,</span><br><span class="line">  <span class="attr">formatter</span>: &#123;</span><br><span class="line">   <span class="attr">type</span>: <span class="string">&#x27;image-text&#x27;</span>, <span class="comment">//格式化方式</span></span><br><span class="line">   <span class="attr">format</span>: <span class="function"><span class="params">row</span> =&gt;</span> &#123;</span><br><span class="line">     <span class="keyword">return</span> &#123;</span><br><span class="line">      <span class="attr">name</span>:<span class="string">&#x27;&#x27;</span>,<span class="comment">// 名称</span></span><br><span class="line">      <span class="attr">url</span>:<span class="string">&#x27;&#x27;</span>  <span class="comment">// 图片路径</span></span><br><span class="line">      <span class="attr">text</span>:[ <span class="comment">//显示文本内容， 建议一行或两行</span></span><br><span class="line">         &#123;</span><br><span class="line">           <span class="attr">content</span>:<span class="string">&#x27;显示文本&#x27;</span></span><br><span class="line">         &#125;,</span><br><span class="line">         &#123;</span><br><span class="line">           <span class="attr">content</span>:<span class="string">&#x27;显示文本&#x27;</span></span><br><span class="line">         &#125;</span><br><span class="line">      ]</span><br><span class="line">     &#125;</span><br><span class="line">   &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="格式化为开关按钮"><a href="#格式化为开关按钮" class="headerlink" title="格式化为开关按钮"></a>格式化为开关按钮</h4><blockquote>
+<p>不建议使用</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">field</span>: <span class="string">&#x27;state&#x27;</span>,</span><br><span class="line">  <span class="attr">title</span>: <span class="string">&#x27;状态&#x27;</span>,</span><br><span class="line">  <span class="attr">sorter</span>: <span class="string">&#x27;true&#x27;</span>,</span><br><span class="line">  <span class="attr">align</span>: <span class="string">&#x27;center&#x27;</span>,</span><br><span class="line">  <span class="attr">width</span>: <span class="number">100</span>,</span><br><span class="line">  <span class="attr">formatter</span>: &#123;</span><br><span class="line">   <span class="attr">type</span>: <span class="string">&#x27;switch&#x27;</span>, <span class="comment">//格式化方式</span></span><br><span class="line">   <span class="attr">format</span>: <span class="function"><span class="params">row</span> =&gt;</span> &#123;</span><br><span class="line">     <span class="keyword">return</span> &#123;</span><br><span class="line">      <span class="attr">value</span>:<span class="literal">true</span>,<span class="comment">// 是否选中  true | false</span></span><br><span class="line">      <span class="attr">change</span>:<span class="function">()=&gt;</span>&#123;<span class="comment">// change事件回调</span></span><br><span class="line">         <span class="keyword">const</span> v = !row.<span class="property">state</span></span><br><span class="line">         <span class="comment">// ...</span></span><br><span class="line">       &#125;</span><br><span class="line">     &#125;</span><br><span class="line">   &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="格式化为徽章"><a href="#格式化为徽章" class="headerlink" title="格式化为徽章"></a>格式化为徽章</h4><blockquote>
+<p>常用于展示各种状态</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">field</span>: <span class="string">&#x27;state&#x27;</span>,</span><br><span class="line">  <span class="attr">title</span>: <span class="string">&#x27;状态&#x27;</span>,</span><br><span class="line">  <span class="attr">sorter</span>: <span class="string">&#x27;true&#x27;</span>,</span><br><span class="line">  <span class="attr">align</span>: <span class="string">&#x27;center&#x27;</span>,</span><br><span class="line">  <span class="attr">width</span>: <span class="number">100</span>,</span><br><span class="line">  <span class="attr">formatter</span>: &#123;</span><br><span class="line">   <span class="attr">type</span>: <span class="string">&#x27;badge&#x27;</span>, <span class="comment">//格式化方式</span></span><br><span class="line">   <span class="attr">format</span>: <span class="function"><span class="params">row</span> =&gt;</span> &#123;</span><br><span class="line">     <span class="keyword">return</span> &#123;</span><br><span class="line">      <span class="attr">value</span>:<span class="string">&#x27;审核通过&#x27;</span>,</span><br><span class="line">      <span class="attr">color</span>:<span class="string">&#x27;blue&#x27;</span><span class="comment">//徽章颜色&#x27;blue&#x27;,&#x27;green&#x27;,&#x27;gray&#x27;,&#x27;orange&#x27;,&#x27;yellow&#x27;,&#x27;red&#x27; 等支持16进制</span></span><br><span class="line">     &#125;</span><br><span class="line">   &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="operate"><a href="#operate" class="headerlink" title="operate"></a>operate</h3><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+<th>是否必填</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>width</td>
+<td>操作列宽度</td>
+<td>否</td>
+<td>Integer</td>
+<td>自适应</td>
+</tr>
+<tr>
+<td>items</td>
+<td>操作配置</td>
+<td>是</td>
+<td>Array</td>
+<td>-</td>
+</tr>
+</tbody></table>
+<h4 id="items"><a href="#items" class="headerlink" title="items"></a>items</h4><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+<th>是否必填</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>label</td>
+<td>显示名称</td>
+<td>是</td>
+<td>String</td>
+<td>-</td>
+</tr>
+<tr>
+<td>permission</td>
+<td>权限标识</td>
+<td>否</td>
+<td>String</td>
+<td>-</td>
+</tr>
+<tr>
+<td>color</td>
+<td>显示颜色【primary,success,danger,warning..】</td>
+<td>是</td>
+<td>String</td>
+<td>-</td>
+</tr>
+<tr>
+<td>event</td>
+<td>点击事件</td>
+<td>是</td>
+<td>Function(row)</td>
+<td></td>
+</tr>
+<tr>
+<td>hidden</td>
+<td>隐藏条件</td>
+<td>是</td>
+<td>Function(row)</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="operate配置示例"><a href="#operate配置示例" class="headerlink" title="operate配置示例"></a>operate配置示例</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">operate</span>: &#123;</span><br><span class="line">          <span class="attr">width</span>: <span class="number">200</span>,</span><br><span class="line">          <span class="attr">items</span>: [</span><br><span class="line">            &#123;</span><br><span class="line">              <span class="attr">label</span>: <span class="string">&#x27;编辑&#x27;</span>,</span><br><span class="line">              <span class="attr">color</span>: <span class="string">&#x27;primary&#x27;</span>,</span><br><span class="line">              <span class="attr">event</span>: <span class="function"><span class="params">row</span> =&gt;</span> &#123;</span><br><span class="line">                <span class="variable language_">this</span>.<span class="property">$refs</span>.<span class="property">edit</span>.<span class="title function_">showModal</span>(row.<span class="property">id</span>)</span><br><span class="line">              &#125;,</span><br><span class="line">              <span class="attr">hidden</span>: <span class="function"><span class="params">row</span> =&gt;</span> &#123;</span><br><span class="line">                <span class="keyword">return</span> row.<span class="property">roleType</span> === <span class="number">1</span></span><br><span class="line">              &#125;</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">              <span class="attr">label</span>: <span class="string">&#x27;置顶&#x27;</span>,</span><br><span class="line">              <span class="attr">color</span>: <span class="string">&#x27;success&#x27;</span>,</span><br><span class="line">              <span class="attr">event</span>: <span class="function"><span class="params">row</span> =&gt;</span> &#123;</span><br><span class="line">                <span class="title function_">update</span>(&#123;</span><br><span class="line">                  <span class="attr">id</span>: row.<span class="property">id</span>,</span><br><span class="line">                  <span class="attr">isTop</span>: <span class="number">1</span></span><br><span class="line">                &#125;).<span class="title function_">then</span>(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">                  <span class="keyword">if</span> (res.<span class="property">code</span> === <span class="number">1</span>) &#123;</span><br><span class="line">                    <span class="variable language_">this</span>.<span class="property">$message</span>.<span class="title function_">success</span>(<span class="string">&#x27;置顶成功&#x27;</span>)</span><br><span class="line">                    <span class="variable language_">this</span>.<span class="title function_">search</span>()</span><br><span class="line">                  &#125;</span><br><span class="line">                &#125;)</span><br><span class="line">              &#125;,</span><br><span class="line">              <span class="attr">hidden</span>: <span class="function"><span class="params">row</span> =&gt;</span> &#123;</span><br><span class="line">                <span class="keyword">return</span> row.<span class="property">isTop</span> === <span class="number">1</span></span><br><span class="line">              &#125;</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">              <span class="attr">label</span>: <span class="string">&#x27;取消置顶&#x27;</span>,</span><br><span class="line">              <span class="attr">color</span>: <span class="string">&#x27;danger&#x27;</span>,</span><br><span class="line">              <span class="attr">event</span>: <span class="function"><span class="params">row</span> =&gt;</span> &#123;</span><br><span class="line">                <span class="title function_">update</span>(&#123;</span><br><span class="line">                  <span class="attr">id</span>: row.<span class="property">id</span>,</span><br><span class="line">                  <span class="attr">isTop</span>: <span class="number">0</span></span><br><span class="line">                &#125;).<span class="title function_">then</span>(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">                  <span class="keyword">if</span> (res.<span class="property">code</span> === <span class="number">1</span>) &#123;</span><br><span class="line">                    <span class="variable language_">this</span>.<span class="property">$message</span>.<span class="title function_">success</span>(<span class="string">&#x27;取消成功&#x27;</span>)</span><br><span class="line">                    <span class="variable language_">this</span>.<span class="title function_">search</span>()</span><br><span class="line">                  &#125;</span><br><span class="line">                &#125;)</span><br><span class="line">              &#125;,</span><br><span class="line">              <span class="attr">hidden</span>: <span class="function"><span class="params">row</span> =&gt;</span> &#123;</span><br><span class="line">                <span class="keyword">return</span> row.<span class="property">isTop</span> !== <span class="number">1</span></span><br><span class="line">              &#125;</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">              <span class="attr">label</span>: <span class="string">&#x27;删除&#x27;</span>,</span><br><span class="line">              <span class="attr">color</span>: <span class="string">&#x27;danger&#x27;</span>,</span><br><span class="line">              <span class="attr">event</span>: <span class="function"><span class="params">row</span> =&gt;</span> &#123;</span><br><span class="line">                <span class="variable language_">this</span>.$confirm(&#123;</span><br><span class="line">                  <span class="attr">title</span>: <span class="string">&#x27;确认删除？&#x27;</span>,</span><br><span class="line">                  <span class="attr">content</span>: <span class="string">&#x27;删除后将无法恢复！&#x27;</span>,</span><br><span class="line">                  <span class="attr">onOk</span>: <span class="function">() =&gt;</span> &#123;</span><br><span class="line">                    <span class="title function_">dels</span>([row.<span class="property">id</span>]).<span class="title function_">then</span>(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">                      <span class="keyword">if</span> (res.<span class="property">code</span> === <span class="number">1</span>) &#123;</span><br><span class="line">                        <span class="variable language_">this</span>.<span class="property">$message</span>.<span class="title function_">success</span>(<span class="string">&#x27;删除成功&#x27;</span>)</span><br><span class="line">                        <span class="variable language_">this</span>.<span class="property">$refs</span>.<span class="property">myTable</span>.<span class="property">selectedRowKeys</span> = []</span><br><span class="line">                        <span class="variable language_">this</span>.<span class="title function_">search</span>()</span><br><span class="line">                      &#125;</span><br><span class="line">                    &#125;)</span><br><span class="line">                  &#125;</span><br><span class="line">                &#125;)</span><br><span class="line">              &#125;</span><br><span class="line">            &#125;</span><br><span class="line">          ]</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="方法-2"><a href="#方法-2" class="headerlink" title="方法"></a>方法</h3><table>
+<thead>
+<tr>
+<th>方法名称</th>
+<th>参数</th>
+<th>返回结果</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>selectedRowKeys</td>
+<td>-</td>
+<td>[id,id,id]</td>
+<td>获取选中的key</td>
+</tr>
+<tr>
+<td>selectedRows</td>
+<td>-</td>
+<td>[{row},{row},{row}]</td>
+<td>获取选中的行</td>
+</tr>
+<tr>
+<td>search</td>
+<td>JSON</td>
+<td>-</td>
+<td>执行搜索{pageNumber:1}&#x3D;搜索第一页</td>
+</tr>
+<tr>
+<td>getSelected</td>
+<td>-</td>
+<td>{selectedRowKeys,selectedRows}</td>
+<td>获取选中的行与选中的key</td>
+</tr>
+<tr>
+<td>setSelected</td>
+<td>selectedRowKeys,selectedRows</td>
+<td>-</td>
+<td>设置选中项</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>关于列表多选，需要保留结果的，建议使用多选选择器</p>
+</blockquote>
+<h2 id="搜索条"><a href="#搜索条" class="headerlink" title="搜索条"></a>搜索条</h2><blockquote>
+<p>常配合table表格使用位于table上方的搜索条件</p>
+</blockquote>
+<h3 id="示例-8"><a href="#示例-8" class="headerlink" title="示例"></a>示例</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;lz-search ref=&quot;searchBar&quot; :column=&quot;3&quot; :items=&quot;items&quot; @search=&quot;search&quot; @reset=&quot;reset&quot;&gt;&lt;/d-search&gt;</span><br><span class="line">    &lt;a-button @click=&quot;getSearchValues&quot;&gt;获取搜索参数&lt;/a-button&gt;</span><br><span class="line">    &lt;a-button style=&quot;margin-left:10px;&quot; @click=&quot;setSearchValues&quot;&gt;设置搜索值&lt;/a-button&gt;</span><br><span class="line">    &lt;div&gt;&#123;&#123; searchValue &#125;&#125;&lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">import items from &#x27;./items&#x27;</span><br><span class="line">export default &#123;</span><br><span class="line">  data () &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      items,</span><br><span class="line">      searchValue: &#123;&#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  created () &#123;&#125;,</span><br><span class="line">  mounted () &#123;&#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    reset () &#123;</span><br><span class="line">      console.log(&#x27;重置搜索条件&#x27;)</span><br><span class="line">    &#125;,</span><br><span class="line">    search (param) &#123;</span><br><span class="line">      this.searchValue = param</span><br><span class="line">    &#125;,</span><br><span class="line">    getSearchValues () &#123;</span><br><span class="line">      this.searchValue = this.$refs.searchBar.getValues()</span><br><span class="line">    &#125;,</span><br><span class="line">    setSearchValues () &#123;</span><br><span class="line">      this.$refs.searchBar.setValues(&#123;</span><br><span class="line">        title: &#x27;测试标题&#x27;,</span><br><span class="line">        state: 0,</span><br><span class="line">        dates: [&#x27;2020-10-10&#x27;, &#x27;2020-11-11&#x27;]</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;style&gt;&lt;/style&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="属性-7"><a href="#属性-7" class="headerlink" title="属性"></a>属性</h3><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>items</td>
+<td>搜索条件配置</td>
+<td>Array</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>column</td>
+<td>每行显示多少列</td>
+<td>Number</td>
+<td>3</td>
+</tr>
+</tbody></table>
+<h3 id="items示例"><a href="#items示例" class="headerlink" title="items示例"></a>items示例</h3><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line">export default <span class="punctuation">[</span></span><br><span class="line"><span class="comment">//文本</span></span><br><span class="line">  <span class="punctuation">&#123;</span></span><br><span class="line">    type<span class="punctuation">:</span> &#x27;text&#x27;<span class="punctuation">,</span> <span class="comment">//组件类型</span></span><br><span class="line">    dataIndex<span class="punctuation">:</span> &#x27;name&#x27;<span class="punctuation">,</span> <span class="comment">//组件key</span></span><br><span class="line">    label<span class="punctuation">:</span> &#x27;名称&#x27;<span class="punctuation">,</span> <span class="comment">//组件显示名称</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="comment">//下拉静态数据</span></span><br><span class="line">  <span class="punctuation">&#123;</span></span><br><span class="line">    type<span class="punctuation">:</span> &#x27;select&#x27;<span class="punctuation">,</span></span><br><span class="line">    dataIndex<span class="punctuation">:</span> &#x27;state&#x27;<span class="punctuation">,</span></span><br><span class="line">    label<span class="punctuation">:</span> &#x27;状态&#x27;<span class="punctuation">,</span></span><br><span class="line">    options<span class="punctuation">:</span> <span class="punctuation">[</span> <span class="comment">//选项配置</span></span><br><span class="line">      <span class="punctuation">&#123;</span></span><br><span class="line">        label<span class="punctuation">:</span> &#x27;启用&#x27;<span class="punctuation">,</span><span class="comment">//名称</span></span><br><span class="line">        value<span class="punctuation">:</span> &#x27;<span class="number">1</span>&#x27; <span class="comment">//值</span></span><br><span class="line">      <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="punctuation">&#123;</span></span><br><span class="line">        label<span class="punctuation">:</span> &#x27;禁用&#x27;<span class="punctuation">,</span></span><br><span class="line">        value<span class="punctuation">:</span> &#x27;<span class="number">0</span>&#x27;</span><br><span class="line">      <span class="punctuation">&#125;</span></span><br><span class="line">    <span class="punctuation">]</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="comment">//下拉动态数据</span></span><br><span class="line">   <span class="punctuation">&#123;</span></span><br><span class="line">    type<span class="punctuation">:</span> &#x27;select&#x27;<span class="punctuation">,</span></span><br><span class="line">    dataIndex<span class="punctuation">:</span> &#x27;state&#x27;<span class="punctuation">,</span></span><br><span class="line">    label<span class="punctuation">:</span> &#x27;状态&#x27;<span class="punctuation">,</span></span><br><span class="line">    options<span class="punctuation">:</span> <span class="punctuation">[</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">    optionsConfig<span class="punctuation">:</span> <span class="punctuation">&#123;</span> <span class="comment">//动态数据配置</span></span><br><span class="line">       url<span class="punctuation">:</span>&#x27;http<span class="punctuation">:</span><span class="comment">//localhost:8102/base/classify/getAll&#x27;,//数据请求地址result:&#123;code:1,content:[]&#125;</span></span><br><span class="line">       label<span class="punctuation">:</span> &#x27;title&#x27;<span class="punctuation">,</span><span class="comment">// label对应key  不设置默认label</span></span><br><span class="line">       value<span class="punctuation">:</span> &#x27;id&#x27; <span class="comment">//value 对应key  不设置默认value</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="comment">//树形下拉</span></span><br><span class="line">   <span class="punctuation">&#123;</span></span><br><span class="line">    type<span class="punctuation">:</span> &#x27;tree-select&#x27;<span class="punctuation">,</span></span><br><span class="line">    dataIndex<span class="punctuation">:</span> &#x27;dept&#x27;<span class="punctuation">,</span></span><br><span class="line">    label<span class="punctuation">:</span> &#x27;树形下拉&#x27;<span class="punctuation">,</span></span><br><span class="line">    defaultValue<span class="punctuation">:</span> &#x27;&#x27;<span class="punctuation">,</span></span><br><span class="line">    allowLv<span class="punctuation">:</span> &#x27;&gt;=<span class="number">0</span>&#x27;<span class="punctuation">,</span><span class="comment">//允许选择层级的条件===n,!==n ,&gt;=n ,&lt;=n,&gt;n,&lt;n,false 不使用条件(不使用条件时，可通过返回结果内增加disabled=[true|false]控制是否可选)</span></span><br><span class="line">    asyncLoad<span class="punctuation">:</span><span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span><span class="comment">//是否开启数据懒加载（开启后会在请求url上增加参数?pid=value）</span></span><br><span class="line">    optionsConfig<span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">       url<span class="punctuation">:</span>&#x27;http<span class="punctuation">:</span><span class="comment">//localhost:8102/base/classify/getAll&#x27;,//数据请求地址result:&#123;code:1,content:[&#123;label,value,lv,[disabled]&#125;]&#125;</span></span><br><span class="line">       label<span class="punctuation">:</span> &#x27;title&#x27;<span class="punctuation">,</span><span class="comment">// label对应key  不设置默认title</span></span><br><span class="line">       value<span class="punctuation">:</span> &#x27;id&#x27;<span class="punctuation">,</span> <span class="comment">//value 对应key  不设置默认value</span></span><br><span class="line">       lv<span class="punctuation">:</span> &#x27;lv&#x27;<span class="comment">//层级 不设置 默认 lv</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="comment">//日期范围</span></span><br><span class="line">  <span class="punctuation">&#123;</span></span><br><span class="line">    type<span class="punctuation">:</span> &#x27;range-picker&#x27;<span class="punctuation">,</span></span><br><span class="line">    dataIndex<span class="punctuation">:</span> &#x27;dates&#x27;<span class="punctuation">,</span></span><br><span class="line">    label<span class="punctuation">:</span> &#x27;日期范围&#x27;<span class="punctuation">,</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="comment">//月选择框</span></span><br><span class="line">  <span class="punctuation">&#123;</span></span><br><span class="line">    type<span class="punctuation">:</span> &#x27;month-picker&#x27;<span class="punctuation">,</span></span><br><span class="line">    dataIndex<span class="punctuation">:</span> &#x27;month&#x27;<span class="punctuation">,</span></span><br><span class="line">    label<span class="punctuation">:</span> &#x27;月份选择&#x27;<span class="punctuation">,</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">]</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="事件-6"><a href="#事件-6" class="headerlink" title="事件"></a>事件</h3><table>
+<thead>
+<tr>
+<th>事件名称</th>
+<th>说明</th>
+<th>回调参数</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>search</td>
+<td>点击搜索</td>
+<td>function(values)</td>
+</tr>
+<tr>
+<td>reset</td>
+<td>点击重置</td>
+<td>function()</td>
+</tr>
+</tbody></table>
+<h3 id="方法-3"><a href="#方法-3" class="headerlink" title="方法"></a>方法</h3><table>
+<thead>
+<tr>
+<th>方法名称</th>
+<th>参数</th>
+<th>返回结果</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>getValues</td>
+<td>-</td>
+<td>Object</td>
+<td>获取当前搜索条件</td>
+</tr>
+<tr>
+<td>setSearchValues</td>
+<td>Object</td>
+<td>-</td>
+<td>设置当前搜索条件</td>
+</tr>
+</tbody></table>
+<h2 id="报表"><a href="#报表" class="headerlink" title="报表"></a>报表</h2><blockquote>
+<p>需结合报表服务</p>
+</blockquote>
+<h3 id="示例-9"><a href="#示例-9" class="headerlink" title="示例"></a>示例</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;lz-report</span><br><span class="line">      ref=&quot;dReport&quot;</span><br><span class="line">      :domain=&quot;domain&quot;</span><br><span class="line">      reportId=&quot;ff80808174d28d1b0174d2b88a730000&quot;</span><br><span class="line">      reportName=&quot;验收单&quot;</span><br><span class="line">    &gt;</span><br><span class="line">      &lt;a-button @click=&quot;hideModal&quot;&gt;关闭&lt;/a-button&gt;</span><br><span class="line">    &lt;/d-report&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">  data () &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      domain: &#x27;http://xxxxxx&#x27; // 报表服务的跟地址</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  created () &#123;&#125;,</span><br><span class="line">  mounted () &#123;</span><br><span class="line">    this.$refs.dReport.init(&#123; orderId: 1, brandId: 123 &#125;, () =&gt; &#123;&#125;)</span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;style&gt;&lt;/style&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="属性-8"><a href="#属性-8" class="headerlink" title="属性"></a>属性</h3><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>domain</td>
+<td>报表服务跟域名</td>
+<td>Array</td>
+<td>必填</td>
+</tr>
+<tr>
+<td>reportId</td>
+<td>报表配置ID</td>
+<td>String</td>
+<td>必填</td>
+</tr>
+<tr>
+<td>reportName</td>
+<td>报表名称</td>
+<td>String</td>
+<td>报表</td>
+</tr>
+<tr>
+<td>solt</td>
+<td>插槽，可插入操作按钮</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+<h3 id="方法-4"><a href="#方法-4" class="headerlink" title="方法"></a>方法</h3><table>
+<thead>
+<tr>
+<th>方法名称</th>
+<th>参数</th>
+<th>返回结果</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>init</td>
+<td>JSON</td>
+<td>-</td>
+<td>初始化报表，参数为配置报表时所需参数</td>
+</tr>
+</tbody></table>
+<h2 id="报表导出"><a href="#报表导出" class="headerlink" title="报表导出"></a>报表导出</h2><blockquote>
+<p>依赖报表服务</p>
+</blockquote>
+<h3 id="示例-10"><a href="#示例-10" class="headerlink" title="示例"></a>示例</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;lz-export-tools</span><br><span class="line">      ref=&quot;lzExportTools&quot;</span><br><span class="line">      domain=&quot;http://localhost:7001&quot;</span><br><span class="line">      reportId=&quot;ff80808174d28d1b0174d43fb7e40001&quot;</span><br><span class="line">      reportName=&quot;测试导出&quot;</span><br><span class="line">      @click=&quot;exportClick&quot;</span><br><span class="line">    /&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">  data () &#123;</span><br><span class="line">    return &#123;&#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  created () &#123;&#125;,</span><br><span class="line">  mounted () &#123;&#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    exportClick () &#123;</span><br><span class="line">      this.$refs.dExportTools.exportExcel(&#123; keyword: &#x27;ceshi&#x27; &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;style&gt;&lt;/style&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="属性-9"><a href="#属性-9" class="headerlink" title="属性"></a>属性</h3><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>domain</td>
+<td>报表服务跟域名</td>
+<td>Array</td>
+<td>必填</td>
+</tr>
+<tr>
+<td>reportId</td>
+<td>报表配置ID</td>
+<td>String</td>
+<td>必填</td>
+</tr>
+<tr>
+<td>reportName</td>
+<td>报表名称</td>
+<td>String</td>
+<td>报表</td>
+</tr>
+</tbody></table>
+<h3 id="方法-5"><a href="#方法-5" class="headerlink" title="方法"></a>方法</h3><table>
+<thead>
+<tr>
+<th>方法名称</th>
+<th>参数</th>
+<th>返回结果</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>exportWord</td>
+<td>JSON</td>
+<td>-</td>
+<td>导出word</td>
+</tr>
+<tr>
+<td>exportExcel</td>
+<td>JSON</td>
+<td>-</td>
+<td>导出excel</td>
+</tr>
+<tr>
+<td>exportPdf</td>
+<td>JSON</td>
+<td>-</td>
+<td>导出pdf</td>
+</tr>
+</tbody></table>
+<h2 id="日期选择器"><a href="#日期选择器" class="headerlink" title="日期选择器"></a>日期选择器</h2><h3 id="示例-11"><a href="#示例-11" class="headerlink" title="示例"></a>示例</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;lz-date-picker</span><br><span class="line">      v-model=&quot;datePicker&quot;</span><br><span class="line">      :show-time=&quot;&#123;</span><br><span class="line">        format: &#x27;HH:mm&#x27;,</span><br><span class="line">      &#125;&quot;</span><br><span class="line">      :show-today=&quot;false&quot;</span><br><span class="line">      @change=&quot;dateChange&quot;</span><br><span class="line">      :disabledDate=&quot;disabledDate&quot;</span><br><span class="line">    /&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">import moment from &#x27;moment&#x27;</span><br><span class="line">export default &#123;</span><br><span class="line">  data () &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      datePicker: &#x27;2020-10-10&#x27;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  created () &#123;&#125;,</span><br><span class="line">  mounted () &#123;&#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    dateChange (values) &#123;</span><br><span class="line">      console.log(values)</span><br><span class="line">    &#125;,</span><br><span class="line">    disabledDate (current) &#123;</span><br><span class="line">      // 只能选择今天之前</span><br><span class="line">      return current &amp;&amp; current &gt; moment().endOf(&#x27;day&#x27;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;style&gt;&lt;/style&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="属性-10"><a href="#属性-10" class="headerlink" title="属性"></a>属性</h3><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>v-model(value)</td>
+<td>绑定值</td>
+<td>Array</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>allowClear</td>
+<td><em>是否展示清除按钮</em></td>
+<td>Boolean</td>
+<td>false</td>
+</tr>
+<tr>
+<td>disabled</td>
+<td><em>禁用全部操作</em></td>
+<td>Boolean</td>
+<td>false</td>
+</tr>
+<tr>
+<td>format</td>
+<td><em>展示的时间格式</em></td>
+<td>String</td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>placeholder</td>
+<td><em>没有值的时候显示的内容</em></td>
+<td>Array</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>size</td>
+<td>文本框大小[large,default,small]</td>
+<td>String</td>
+<td>default</td>
+</tr>
+<tr>
+<td>inputReadOnly</td>
+<td><em>设置输入框为只读（避免在移动设备上打开虚拟键盘）</em></td>
+<td>Boolean</td>
+<td>true</td>
+</tr>
+<tr>
+<td>showToday</td>
+<td><em>是否展示“今天”按钮</em></td>
+<td>Boolean</td>
+<td>true</td>
+</tr>
+<tr>
+<td>showTime</td>
+<td><em>显示时间选择器</em></td>
+<td>[Object, Boolean]</td>
+<td>false</td>
+</tr>
+<tr>
+<td>disabledDate</td>
+<td><em>禁用日期</em></td>
+<td>[Function, Boolean]</td>
+<td>false</td>
+</tr>
+<tr>
+<td>disabledTime</td>
+<td><em>禁用时间</em></td>
+<td>[Function, Boolean]</td>
+<td>false</td>
+</tr>
+</tbody></table>
+<h3 id="事件-7"><a href="#事件-7" class="headerlink" title="事件"></a>事件</h3><table>
+<thead>
+<tr>
+<th>事件名称</th>
+<th>说明</th>
+<th>回调参数</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>change</td>
+<td>选择值改变</td>
+<td>function(values)</td>
+</tr>
+</tbody></table>
+<h2 id="日期范围选择器"><a href="#日期范围选择器" class="headerlink" title="日期范围选择器"></a>日期范围选择器</h2><h3 id="示例-12"><a href="#示例-12" class="headerlink" title="示例"></a>示例</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;lz-range-picker</span><br><span class="line">      v-model=&quot;rangePicker&quot;</span><br><span class="line">      format=&quot;YYYY-MM-DD HH:mm&quot;</span><br><span class="line">      :showTime=&quot;&#123;</span><br><span class="line">        format: &#x27;HH:mm&#x27;,</span><br><span class="line">      &#125;&quot;</span><br><span class="line">      :disabled-date=&quot;disabledDate&quot;</span><br><span class="line">      :placeholder=&quot;[&#x27;开始日期&#x27;,&#x27;结束日期&#x27;]&quot;</span><br><span class="line">    &gt;&lt;/d-range-picker&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">import moment from &#x27;moment&#x27;</span><br><span class="line">export default &#123;</span><br><span class="line">  data () &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      rangePicker: [&#x27;&#x27;, &#x27;&#x27;]</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  created () &#123;&#125;,</span><br><span class="line">  mounted () &#123;&#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    disabledDate (current) &#123;</span><br><span class="line">      // 禁止点击今天与今天之前的日志</span><br><span class="line">      return current &amp;&amp; current &lt; moment().endOf(&#x27;day&#x27;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;style&gt;&lt;/style&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="属性-11"><a href="#属性-11" class="headerlink" title="属性"></a>属性</h3><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>v-model(value)</td>
+<td>绑定值</td>
+<td>Array</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>allowClear</td>
+<td><em>是否展示清除按钮</em></td>
+<td>Boolean</td>
+<td>false</td>
+</tr>
+<tr>
+<td>disabled</td>
+<td><em>禁用全部操作</em></td>
+<td>Boolean</td>
+<td>false</td>
+</tr>
+<tr>
+<td>format</td>
+<td><em>展示的时间格式</em></td>
+<td>String</td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>placeholder</td>
+<td><em>没有值的时候显示的内容</em></td>
+<td>Array</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>size</td>
+<td>文本框大小[large,default,small]</td>
+<td>String</td>
+<td>default</td>
+</tr>
+<tr>
+<td>inputReadOnly</td>
+<td><em>设置输入框为只读（避免在移动设备上打开虚拟键盘）</em></td>
+<td>Boolean</td>
+<td>true</td>
+</tr>
+<tr>
+<td>showTime</td>
+<td><em>显示时间选择器</em></td>
+<td>[Object, Boolean]</td>
+<td>false</td>
+</tr>
+<tr>
+<td>disabledDate</td>
+<td><em>禁用日期</em></td>
+<td>[Function, Boolean]</td>
+<td>false</td>
+</tr>
+<tr>
+<td>disabledTime</td>
+<td><em>禁用时间</em></td>
+<td>[Function, Boolean]</td>
+<td>false</td>
+</tr>
+<tr>
+<td>showRanges</td>
+<td><em>显示扩展按钮</em></td>
+<td>Boolean</td>
+<td>true</td>
+</tr>
+</tbody></table>
+<h3 id="事件-8"><a href="#事件-8" class="headerlink" title="事件"></a>事件</h3><table>
+<thead>
+<tr>
+<th>事件名称</th>
+<th>说明</th>
+<th>回调参数</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>change</td>
+<td>选择值改变</td>
+<td>function(values)</td>
+</tr>
+</tbody></table>
+<h2 id="单选选择器"><a href="#单选选择器" class="headerlink" title="单选选择器"></a>单选选择器</h2><h3 id="示例-13"><a href="#示例-13" class="headerlink" title="示例"></a>示例</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;lz-one-selector</span><br><span class="line">      :action=&quot;action&quot;</span><br><span class="line">      :replaceFields=&quot;&#123;</span><br><span class="line">        title: &#x27;cateName,cateCode&#x27;,</span><br><span class="line">        description: &#x27;createTime&#x27;,</span><br><span class="line">      &#125;&quot;</span><br><span class="line">      v-model=&quot;selector&quot;</span><br><span class="line">      @change=&quot;handelChange&quot;</span><br><span class="line">      :show-description=&quot;true&quot;</span><br><span class="line">    /&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">  data () &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      selector: null,</span><br><span class="line">      action: &#x27;http://xxx&#x27;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  created () &#123;&#125;,</span><br><span class="line">  mounted () &#123;&#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    handelChange (values) &#123;</span><br><span class="line">      console.log(values)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;style&gt;&lt;/style&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="属性-12"><a href="#属性-12" class="headerlink" title="属性"></a>属性</h3><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>v-model(value)</td>
+<td>绑定值</td>
+<td>Object</td>
+<td>null</td>
+</tr>
+<tr>
+<td>action</td>
+<td>左侧数据请求url<br/>（自动附加请求参数：pageSize，pageNumber，keyword）</td>
+<td>String</td>
+<td>‘’</td>
+</tr>
+<tr>
+<td>replaceFields</td>
+<td>显示的内容可以用(,)分割在一行展示多列</td>
+<td>Object</td>
+<td>{<br/>	title: ‘title,code’,<br/>	description: ‘createTime’,<br/>}</td>
+</tr>
+<tr>
+<td>showDescription</td>
+<td>是否显示描述行</td>
+<td>Boolean</td>
+<td>true</td>
+</tr>
+</tbody></table>
+<h3 id="事件-9"><a href="#事件-9" class="headerlink" title="事件"></a>事件</h3><table>
+<thead>
+<tr>
+<th>事件名称</th>
+<th>说明</th>
+<th>回调参数</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>change</td>
+<td>结果发生改变时调用</td>
+<td>function(values)</td>
+</tr>
+</tbody></table>
+<h2 id="多选选择器"><a href="#多选选择器" class="headerlink" title="多选选择器"></a>多选选择器</h2><h3 id="示例-14"><a href="#示例-14" class="headerlink" title="示例"></a>示例</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;lz-multiple-selector</span><br><span class="line">      :action=&quot;action&quot;</span><br><span class="line">      :replaceFields=&quot;&#123;</span><br><span class="line">        title: &#x27;title,code&#x27;,</span><br><span class="line">        description: &#x27;note&#x27;,</span><br><span class="line">      &#125;&quot;</span><br><span class="line">      v-model=&quot;selector&quot;</span><br><span class="line">      :show-description=&quot;false&quot;</span><br><span class="line">      @change=&quot;handelChange&quot;</span><br><span class="line">    /&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">  export default &#123;</span><br><span class="line">    data () &#123;</span><br><span class="line">      return &#123;</span><br><span class="line">        selector: [],</span><br><span class="line">        action: &#x27;http://xxx&#x27;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">  created () &#123;&#125;,</span><br><span class="line">  mounted () &#123;&#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    handelChange (values) &#123;</span><br><span class="line">        console.log(values)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;style&gt;&lt;/style&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="属性-13"><a href="#属性-13" class="headerlink" title="属性"></a>属性</h3><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>v-model(value)</td>
+<td>绑定值</td>
+<td>Object</td>
+<td>null</td>
+</tr>
+<tr>
+<td>action</td>
+<td>左侧数据请求url<br/>（自动附加请求参数：pageSize，pageNumber，keyword）</td>
+<td>String</td>
+<td>‘’</td>
+</tr>
+<tr>
+<td>replaceFields</td>
+<td>显示的内容可以用(,)分割在一行展示多列</td>
+<td>Object</td>
+<td>{<br/>	title: ‘title,code’,<br/>	description: ‘createTime’,<br/>}</td>
+</tr>
+<tr>
+<td>showDescription</td>
+<td>是否显示描述行</td>
+<td>Boolean</td>
+<td>true</td>
+</tr>
+</tbody></table>
+<h3 id="事件-10"><a href="#事件-10" class="headerlink" title="事件"></a>事件</h3><table>
+<thead>
+<tr>
+<th>事件名称</th>
+<th>说明</th>
+<th>回调参数</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>change</td>
+<td>结果发生改变时调用</td>
+<td>function(values)</td>
+</tr>
+</tbody></table>
+<h2 id="月选择"><a href="#月选择" class="headerlink" title="月选择"></a>月选择</h2><h3 id="示例-15"><a href="#示例-15" class="headerlink" title="示例"></a>示例</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;lz-month-picker v-model=&quot;month&quot; :disabledDate=&quot;disabledDate&quot; /&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">import moment from &#x27;moment&#x27;</span><br><span class="line">export default &#123;</span><br><span class="line">  data () &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      month: null</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  created () &#123;&#125;,</span><br><span class="line">  mounted () &#123;&#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    disabledDate (current) &#123;</span><br><span class="line">      // 只能选择今天及以前的月</span><br><span class="line">      return current &amp;&amp; current &gt; moment().endOf(&#x27;day&#x27;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;style&gt;&lt;/style&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="属性-14"><a href="#属性-14" class="headerlink" title="属性"></a>属性</h3><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>v-model(value)</td>
+<td>绑定值</td>
+<td>String</td>
+<td>null</td>
+</tr>
+<tr>
+<td>allowClear</td>
+<td><em>是否展示清除按钮</em></td>
+<td>Boolean</td>
+<td>false</td>
+</tr>
+<tr>
+<td>disabled</td>
+<td><em>禁用全部操作</em></td>
+<td>Boolean</td>
+<td>false</td>
+</tr>
+<tr>
+<td>format</td>
+<td><em>展示格式</em></td>
+<td>String</td>
+<td>YYYY-MM</td>
+</tr>
+<tr>
+<td>placeholder</td>
+<td><em>没有值的时候显示的内容</em></td>
+<td>String</td>
+<td>‘’</td>
+</tr>
+<tr>
+<td>size</td>
+<td>文本框大小[large,default,small]</td>
+<td>String</td>
+<td>default</td>
+</tr>
+<tr>
+<td>inputReadOnly</td>
+<td><em>设置输入框为只读（避免在移动设备上打开虚拟键盘）</em></td>
+<td>Boolean</td>
+<td>true</td>
+</tr>
+<tr>
+<td>disabledDate</td>
+<td><em>禁用日期</em></td>
+<td>[Function, Boolean]</td>
+<td>false</td>
+</tr>
+</tbody></table>
+<h3 id="事件-11"><a href="#事件-11" class="headerlink" title="事件"></a>事件</h3><table>
+<thead>
+<tr>
+<th>事件名称</th>
+<th>说明</th>
+<th>回调参数</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>change</td>
+<td>结果发生改变时调用</td>
+<td>function(values)</td>
+</tr>
+</tbody></table>
+<h2 id="图片列表"><a href="#图片列表" class="headerlink" title="图片列表"></a>图片列表</h2><h3 id="示例-16"><a href="#示例-16" class="headerlink" title="示例"></a>示例</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;lz-image</span><br><span class="line">      url=&quot;path&quot;</span><br><span class="line">      :data-list=&quot;dataList&quot;</span><br><span class="line">      width=&quot;100px&quot;</span><br><span class="line">      height=&quot;100px&quot;</span><br><span class="line">    &gt;</span><br><span class="line"></span><br><span class="line">    &lt;/d-image&gt;&lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">  export default &#123;</span><br><span class="line">    data () &#123;</span><br><span class="line">      return &#123;</span><br><span class="line">        dataList: [</span><br><span class="line">          &#123;</span><br><span class="line">            path:</span><br><span class="line">              &#x27;https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&amp;quality=100&amp;size=b4000_4000&amp;sec=1595555863&amp;di=170ed927a6ae5b36f478e5b222d05816&amp;src=http://a3.att.hudong.com/14/75/01300000164186121366756803686.jpg&#x27;</span><br><span class="line">          &#125;,</span><br><span class="line">          &#123;</span><br><span class="line">            path:</span><br><span class="line">              &#x27;https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1595565947814&amp;di=88ad5be9f62cf469215501c5abe970a0&amp;imgtype=0&amp;src=http%3A%2F%2Fa4.att.hudong.com%2F22%2F59%2F19300001325156131228593878903.jpg&#x27;</span><br><span class="line">          &#125;,</span><br><span class="line">          &#123;</span><br><span class="line">            path:</span><br><span class="line">              &#x27;https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1595565947814&amp;di=88ad5be9f62cf469215501c5abe970a0&amp;imgtype=0&amp;src=http%3A%2F%2Fa4.att.hudong.com%2F22%2F59%2F19300001325156131228593878903.jpg&#x27;</span><br><span class="line">          &#125;,</span><br><span class="line">          &#123;</span><br><span class="line">            path:</span><br><span class="line">              &#x27;https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1595565947814&amp;di=88ad5be9f62cf469215501c5abe970a0&amp;imgtype=0&amp;src=http%3A%2F%2Fa4.att.hudong.com%2F22%2F59%2F19300001325156131228593878903.jpg&#x27;</span><br><span class="line">          &#125;,</span><br><span class="line">          &#123;</span><br><span class="line">            path:</span><br><span class="line">              &#x27;https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1595565947814&amp;di=88ad5be9f62cf469215501c5abe970a0&amp;imgtype=0&amp;src=http%3A%2F%2Fa4.att.hudong.com%2F22%2F59%2F19300001325156131228593878903.jpg&#x27;</span><br><span class="line">          &#125;,</span><br><span class="line">          &#123;</span><br><span class="line">            path:</span><br><span class="line">              &#x27;https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1595565947814&amp;di=88ad5be9f62cf469215501c5abe970a0&amp;imgtype=0&amp;src=http%3A%2F%2Fa4.att.hudong.com%2F22%2F59%2F19300001325156131228593878903.jpg&#x27;</span><br><span class="line">          &#125;</span><br><span class="line">        ]</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">  created () &#123;&#125;,</span><br><span class="line">  mounted () &#123;&#125;,</span><br><span class="line">  methods: &#123;&#125;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;style&gt;&lt;/style&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="属性-15"><a href="#属性-15" class="headerlink" title="属性"></a>属性</h3><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>data-list</td>
+<td>图片列表数据</td>
+<td>Array</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>url</td>
+<td>图片列表中对应url的地址dataIndex</td>
+<td>String</td>
+<td>url</td>
+</tr>
+<tr>
+<td>baseUrl</td>
+<td>图片访问跟地址</td>
+<td>String</td>
+<td>‘’</td>
+</tr>
+<tr>
+<td>width</td>
+<td>图片宽</td>
+<td>String</td>
+<td>100px</td>
+</tr>
+<tr>
+<td>height</td>
+<td>图片高</td>
+<td>String</td>
+<td>100px</td>
+</tr>
+</tbody></table>
+<h2 id="高德地图坐标拾取"><a href="#高德地图坐标拾取" class="headerlink" title="高德地图坐标拾取"></a>高德地图坐标拾取</h2><h3 id="示例-17"><a href="#示例-17" class="headerlink" title="示例"></a>示例</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;lz-map-choose-address</span><br><span class="line">      map-key=&quot;87ff1e887140aa980a075c096a434940&quot;</span><br><span class="line">      placeholder=&quot;请设置地址&quot;</span><br><span class="line">      v-model=&quot;chooseArddr&quot;</span><br><span class="line">      @change=&quot;chooseArddrChange&quot;</span><br><span class="line">    /&gt;</span><br><span class="line">    选择结果：&#123;&#123; chooseArddr &#125;&#125;</span><br><span class="line"></span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">  data () &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      chooseArddr: null</span><br><span class="line">      // &#123;</span><br><span class="line">      //   addr: &#x27;河南省郑州市金水区文化路街道河南省农业科学院1&#x27;,</span><br><span class="line">      //   lat: &#x27;34.788996&#x27;,</span><br><span class="line">      //   lng: &#x27;113.679317&#x27;</span><br><span class="line">      // &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  created () &#123;&#125;,</span><br><span class="line">  mounted () &#123;&#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    chooseArddrChange (val) &#123;</span><br><span class="line">      console.log(val)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;style&gt;&lt;/style&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="属性-16"><a href="#属性-16" class="headerlink" title="属性"></a>属性</h3><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>v-model(value)</td>
+<td>绑定数据</td>
+<td>Object</td>
+<td>null</td>
+</tr>
+<tr>
+<td>placeholder</td>
+<td>数据空时提示</td>
+<td>String</td>
+<td>‘’</td>
+</tr>
+<tr>
+<td>mapKey</td>
+<td>高德地图申请的key</td>
+<td>String</td>
+<td>必填</td>
+</tr>
+</tbody></table>
+<h3 id="事件-12"><a href="#事件-12" class="headerlink" title="事件"></a>事件</h3><table>
+<thead>
+<tr>
+<th>事件名称</th>
+<th>说明</th>
+<th>回调参数</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>change</td>
+<td>结果发生改变时调用</td>
+<td>function(values)</td>
+</tr>
+</tbody></table>
+<h2 id="树形-1"><a href="#树形-1" class="headerlink" title="树形"></a>树形</h2><blockquote>
+<p>适用于授权等，层级不限，最后一级横排。</p>
+</blockquote>
+<h3 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h3><p><img src="https://cdn.jsdelivr.net/gh/itvita/liuqiang@master/md/lzAuthTree.jpg" alt="lzAuthTree.jpg"></p>
+<h3 id="示例-18"><a href="#示例-18" class="headerlink" title="示例"></a>示例</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;lz-auth-tree v-model=&quot;checkedKeys&quot; :items=&quot;treeData&quot; @change=&quot;change&quot; /&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">  components: &#123;&#125;,</span><br><span class="line">  data () &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      checkedKeys: [&#x27;1323994360672419840&#x27;],</span><br><span class="line">      treeData: [</span><br><span class="line">        &#123;</span><br><span class="line">          children: [</span><br><span class="line">            &#123;</span><br><span class="line">              pid: &#x27;1323994360672419840&#x27;,</span><br><span class="line">              menuType: 2,</span><br><span class="line">              id: &#x27;1323995046420152320&#x27;,</span><br><span class="line">              title: &#x27;分类管理&#x27;</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">              pid: &#x27;1323994360672419840&#x27;,</span><br><span class="line">              menuType: 2,</span><br><span class="line">              id: &#x27;1323997514642227200&#x27;,</span><br><span class="line">              title: &#x27;文章管理&#x27;</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">              pid: &#x27;1323994360672419840&#x27;,</span><br><span class="line">              menuType: 2,</span><br><span class="line">              id: &#x27;1335853728959299584&#x27;,</span><br><span class="line">              title: &#x27;用户管理&#x27;</span><br><span class="line">            &#125;</span><br><span class="line">          ],</span><br><span class="line">          pid: &#x27;0&#x27;,</span><br><span class="line">          menuType: 1,</span><br><span class="line">          id: &#x27;1323994360672419840&#x27;,</span><br><span class="line">          title: &#x27;IT生活&#x27;</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">          children: [</span><br><span class="line">            &#123;</span><br><span class="line">              pid: &#x27;1322770188088639488&#x27;,</span><br><span class="line">              menuType: 2,</span><br><span class="line">              id: &#x27;1322803882748805120&#x27;,</span><br><span class="line">              title: &#x27;用户管理&#x27;</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">              pid: &#x27;1322770188088639488&#x27;,</span><br><span class="line">              menuType: 2,</span><br><span class="line">              id: &#x27;1322774696441151488&#x27;,</span><br><span class="line">              title: &#x27;菜单管理&#x27;</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">              pid: &#x27;1322770188088639488&#x27;,</span><br><span class="line">              menuType: 2,</span><br><span class="line">              id: &#x27;1322803959471013888&#x27;,</span><br><span class="line">              title: &#x27;角色管理&#x27;</span><br><span class="line">            &#125;</span><br><span class="line">          ],</span><br><span class="line">          pid: &#x27;0&#x27;,</span><br><span class="line">          menuType: 1,</span><br><span class="line">          id: &#x27;1322770188088639488&#x27;,</span><br><span class="line">          title: &#x27;系统管理&#x27;</span><br><span class="line">        &#125;</span><br><span class="line">      ]</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  created () &#123;&#125;,</span><br><span class="line">  mounted () &#123;&#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    change (e) &#123;</span><br><span class="line">      console.log(e)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;style&gt;&lt;/style&gt;		</span><br></pre></td></tr></table></figure>
+
+<h3 id="属性-17"><a href="#属性-17" class="headerlink" title="属性"></a>属性</h3><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>v-model(value)</td>
+<td>绑定数据</td>
+<td>Array</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>items</td>
+<td>渲染数据</td>
+<td>Array(树形)[{id:xx,title:xx}]</td>
+<td>[]</td>
+</tr>
+</tbody></table>
+<h3 id="事件-13"><a href="#事件-13" class="headerlink" title="事件"></a>事件</h3><table>
+<thead>
+<tr>
+<th>事件名称</th>
+<th>说明</th>
+<th>回调参数</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>change</td>
+<td>结果发生改变时调用</td>
+<td>function(values)</td>
+</tr>
+</tbody></table>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="/music/C400000ztSoN2Od4mh.m4a">
+            </audio>
+            
+        </div>
+        
+        
+    <div id="gitalk-container" class="comment link"
+		data-enable="true"
+        data-ae="true"
+        data-ci="d1bce04390a8da2fa2ac"
+        data-cs="7194f621e1c1fa838710abd2a4a7ff05e4e511de"
+        data-r="site"
+        data-o="itvita"
+        data-a="itvita"
+        data-d="true"
+    >查看评论</div>
+
+
+    </div>
+    
+        <div class="side">
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%86%E9%A2%91%E9%A2%84%E8%A7%88%E5%88%97%E8%A1%A8"><span class="toc-number">1.</span> <span class="toc-text">视频预览列表</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B"><span class="toc-number">1.1.</span> <span class="toc-text">示例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B1%9E%E6%80%A7%E8%AF%B4%E6%98%8E"><span class="toc-number">1.2.</span> <span class="toc-text">属性说明</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E4%B8%8A%E4%BC%A0%E6%8C%89%E9%92%AE"><span class="toc-number">2.</span> <span class="toc-text">基础上传按钮</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B-1"><span class="toc-number">2.1.</span> <span class="toc-text">示例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B1%9E%E6%80%A7"><span class="toc-number">2.2.</span> <span class="toc-text">属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8B%E4%BB%B6"><span class="toc-number">2.3.</span> <span class="toc-text">事件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#values%E8%AF%B4%E6%98%8E"><span class="toc-number">2.4.</span> <span class="toc-text">values说明</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0"><span class="toc-number">3.</span> <span class="toc-text">文件上传</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B-2"><span class="toc-number">3.1.</span> <span class="toc-text">示例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B1%9E%E6%80%A7-1"><span class="toc-number">3.2.</span> <span class="toc-text">属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#step%E8%AF%B4%E6%98%8E"><span class="toc-number">3.3.</span> <span class="toc-text">step说明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8B%E4%BB%B6-1"><span class="toc-number">3.4.</span> <span class="toc-text">事件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#values%E4%B8%BE%E4%BE%8B"><span class="toc-number">3.5.</span> <span class="toc-text">values举例</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%91%E5%BD%A2%E4%B8%8B%E6%8B%89"><span class="toc-number">4.</span> <span class="toc-text">树形下拉</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B-3"><span class="toc-number">4.1.</span> <span class="toc-text">示例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B1%9E%E6%80%A7-2"><span class="toc-number">4.2.</span> <span class="toc-text">属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#asyncLoad%E8%AF%B4%E6%98%8E"><span class="toc-number">4.3.</span> <span class="toc-text">asyncLoad说明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95"><span class="toc-number">4.4.</span> <span class="toc-text">方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8B%E4%BB%B6-2"><span class="toc-number">4.5.</span> <span class="toc-text">事件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%91%E5%BD%A2"><span class="toc-number">5.</span> <span class="toc-text">树形</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B-4"><span class="toc-number">5.1.</span> <span class="toc-text">示例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B1%9E%E6%80%A7-3"><span class="toc-number">5.2.</span> <span class="toc-text">属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8B%E4%BB%B6-3"><span class="toc-number">5.3.</span> <span class="toc-text">事件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95-1"><span class="toc-number">5.4.</span> <span class="toc-text">方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%B6%E9%97%B4%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">6.</span> <span class="toc-text">时间选择器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B-5"><span class="toc-number">6.1.</span> <span class="toc-text">示例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B1%9E%E6%80%A7-4"><span class="toc-number">6.2.</span> <span class="toc-text">属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8B%E4%BB%B6-4"><span class="toc-number">6.3.</span> <span class="toc-text">事件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E6%9C%AC%E6%98%BE%E7%A4%BA"><span class="toc-number">7.</span> <span class="toc-text">文本显示</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B-6"><span class="toc-number">7.1.</span> <span class="toc-text">示例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B1%9E%E6%80%A7-5"><span class="toc-number">7.2.</span> <span class="toc-text">属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8B%E4%BB%B6-5"><span class="toc-number">7.3.</span> <span class="toc-text">事件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#table%E8%A1%A8%E6%A0%BC"><span class="toc-number">8.</span> <span class="toc-text">table表格</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B-7"><span class="toc-number">8.1.</span> <span class="toc-text">示例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B1%9E%E6%80%A7-6"><span class="toc-number">8.2.</span> <span class="toc-text">属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#columns"><span class="toc-number">8.3.</span> <span class="toc-text">columns</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#columns%E5%88%97%E9%85%8D%E7%BD%AE%E7%A4%BA%E4%BE%8B"><span class="toc-number">8.4.</span> <span class="toc-text">columns列配置示例</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE"><span class="toc-number">8.4.1.</span> <span class="toc-text">基本配置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%96%87%E6%9C%AC"><span class="toc-number">8.4.2.</span> <span class="toc-text">格式化文本</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%98%BE%E7%A4%BA%E5%9B%BE%E7%89%87"><span class="toc-number">8.4.3.</span> <span class="toc-text">格式化显示图片</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%BC%E5%BC%8F%E5%8C%96%E4%B8%BA%E5%9B%BE%E6%96%87"><span class="toc-number">8.4.4.</span> <span class="toc-text">格式化为图文</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%BC%E5%BC%8F%E5%8C%96%E4%B8%BA%E5%BC%80%E5%85%B3%E6%8C%89%E9%92%AE"><span class="toc-number">8.4.5.</span> <span class="toc-text">格式化为开关按钮</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%BC%E5%BC%8F%E5%8C%96%E4%B8%BA%E5%BE%BD%E7%AB%A0"><span class="toc-number">8.4.6.</span> <span class="toc-text">格式化为徽章</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#operate"><span class="toc-number">8.5.</span> <span class="toc-text">operate</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#items"><span class="toc-number">8.5.1.</span> <span class="toc-text">items</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#operate%E9%85%8D%E7%BD%AE%E7%A4%BA%E4%BE%8B"><span class="toc-number">8.6.</span> <span class="toc-text">operate配置示例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95-2"><span class="toc-number">8.7.</span> <span class="toc-text">方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%90%9C%E7%B4%A2%E6%9D%A1"><span class="toc-number">9.</span> <span class="toc-text">搜索条</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B-8"><span class="toc-number">9.1.</span> <span class="toc-text">示例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B1%9E%E6%80%A7-7"><span class="toc-number">9.2.</span> <span class="toc-text">属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#items%E7%A4%BA%E4%BE%8B"><span class="toc-number">9.3.</span> <span class="toc-text">items示例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8B%E4%BB%B6-6"><span class="toc-number">9.4.</span> <span class="toc-text">事件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95-3"><span class="toc-number">9.5.</span> <span class="toc-text">方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%A5%E8%A1%A8"><span class="toc-number">10.</span> <span class="toc-text">报表</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B-9"><span class="toc-number">10.1.</span> <span class="toc-text">示例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B1%9E%E6%80%A7-8"><span class="toc-number">10.2.</span> <span class="toc-text">属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95-4"><span class="toc-number">10.3.</span> <span class="toc-text">方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%A5%E8%A1%A8%E5%AF%BC%E5%87%BA"><span class="toc-number">11.</span> <span class="toc-text">报表导出</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B-10"><span class="toc-number">11.1.</span> <span class="toc-text">示例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B1%9E%E6%80%A7-9"><span class="toc-number">11.2.</span> <span class="toc-text">属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95-5"><span class="toc-number">11.3.</span> <span class="toc-text">方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%A5%E6%9C%9F%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">12.</span> <span class="toc-text">日期选择器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B-11"><span class="toc-number">12.1.</span> <span class="toc-text">示例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B1%9E%E6%80%A7-10"><span class="toc-number">12.2.</span> <span class="toc-text">属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8B%E4%BB%B6-7"><span class="toc-number">12.3.</span> <span class="toc-text">事件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%A5%E6%9C%9F%E8%8C%83%E5%9B%B4%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">13.</span> <span class="toc-text">日期范围选择器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B-12"><span class="toc-number">13.1.</span> <span class="toc-text">示例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B1%9E%E6%80%A7-11"><span class="toc-number">13.2.</span> <span class="toc-text">属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8B%E4%BB%B6-8"><span class="toc-number">13.3.</span> <span class="toc-text">事件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%95%E9%80%89%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">14.</span> <span class="toc-text">单选选择器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B-13"><span class="toc-number">14.1.</span> <span class="toc-text">示例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B1%9E%E6%80%A7-12"><span class="toc-number">14.2.</span> <span class="toc-text">属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8B%E4%BB%B6-9"><span class="toc-number">14.3.</span> <span class="toc-text">事件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%9A%E9%80%89%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">15.</span> <span class="toc-text">多选选择器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B-14"><span class="toc-number">15.1.</span> <span class="toc-text">示例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B1%9E%E6%80%A7-13"><span class="toc-number">15.2.</span> <span class="toc-text">属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8B%E4%BB%B6-10"><span class="toc-number">15.3.</span> <span class="toc-text">事件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%88%E9%80%89%E6%8B%A9"><span class="toc-number">16.</span> <span class="toc-text">月选择</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B-15"><span class="toc-number">16.1.</span> <span class="toc-text">示例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B1%9E%E6%80%A7-14"><span class="toc-number">16.2.</span> <span class="toc-text">属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8B%E4%BB%B6-11"><span class="toc-number">16.3.</span> <span class="toc-text">事件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE%E7%89%87%E5%88%97%E8%A1%A8"><span class="toc-number">17.</span> <span class="toc-text">图片列表</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B-16"><span class="toc-number">17.1.</span> <span class="toc-text">示例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B1%9E%E6%80%A7-15"><span class="toc-number">17.2.</span> <span class="toc-text">属性</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%AB%98%E5%BE%B7%E5%9C%B0%E5%9B%BE%E5%9D%90%E6%A0%87%E6%8B%BE%E5%8F%96"><span class="toc-number">18.</span> <span class="toc-text">高德地图坐标拾取</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B-17"><span class="toc-number">18.1.</span> <span class="toc-text">示例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B1%9E%E6%80%A7-16"><span class="toc-number">18.2.</span> <span class="toc-text">属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8B%E4%BB%B6-12"><span class="toc-number">18.3.</span> <span class="toc-text">事件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%91%E5%BD%A2-1"><span class="toc-number">19.</span> <span class="toc-text">树形</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%88%E6%9E%9C"><span class="toc-number">19.1.</span> <span class="toc-text">效果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B-18"><span class="toc-number">19.2.</span> <span class="toc-text">示例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B1%9E%E6%80%A7-17"><span class="toc-number">19.3.</span> <span class="toc-text">属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8B%E4%BB%B6-13"><span class="toc-number">19.4.</span> <span class="toc-text">事件</span></a></li></ol></li></ol>
+        </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+<script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+        tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno",skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']},
+        TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}" } },
+        messageStyle: "none"
+    });
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+
+</html>
