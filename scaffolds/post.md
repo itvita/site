@@ -6,6 +6,6 @@ categories:
 tags: 
     - 标签1
     - 标签2
-mp3: 
-cover: 
+mp3: /music/.mp3
+cover: /img/.jpg
 ---
