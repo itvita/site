@@ -4122,25 +4122,4 @@ chmod 755 /data/sftp/mysftp2020/upload
         <tag>vscode</tag>
       </tags>
   </entry>
-  <entry>
-    <title>vscode配置markdown</title>
-    <url>/20221205/vscode%E9%85%8D%E7%BD%AEmarkdown_/</url>
-    <content><![CDATA[<ol>
-<li><a href="#%E5%AE%89%E8%A3%85%E6%8F%92%E4%BB%B6">安装插件</a></li>
-</ol>
-<h1 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h1><ol>
-<li>Markdown All in One</li>
-<li>Markdown PDF</li>
-<li>Markdown Preview Enhanced</li>
-<li>Paste Image</li>
-</ol>
-]]></content>
-      <categories>
-        <category>分类1</category>
-      </categories>
-      <tags>
-        <tag>标签1</tag>
-        <tag>标签2</tag>
-      </tags>
-  </entry>
 </search>

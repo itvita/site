@@ -13,7 +13,7 @@ tags:
   - vscode
   - markdown
 mp3: /music/点歌的人-海来阿木.mp3
-cover: /img/000726-16587652463b70.jpg
+cover: /img/230930-1604502570e6f5.jpg
 date: 2022-12-05 09:37:57
 ---
 <!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=true} -->
