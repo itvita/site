@@ -12,18 +12,18 @@ categories:
 tags:
   - 标签1
   - 标签2
-mp3: /music/.mp3
-cover: /img/.jpg
+mp3: 
+cover: 
 date: 2023-01-31 18:24:04
 ---
 <!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=true} -->
 <!-- code_chunk_output -->
 
-1. [安装adb](#-安装adb)
-    1. [下载](#-下载)
-    2. [解压配置环境变量](#-解压配置环境变量)
-2. [安卓 firefox配置](#-安卓-firefox配置)
-3. [windows firefox配置](#-windows-firefox配置)
+1. [安装adb](#安装adb)
+    1. [下载](#下载)
+    2. [解压配置环境变量](#解压配置环境变量)
+2. [安卓 firefox配置](#安卓-firefox配置)
+3. [windows firefox配置](#windows-firefox配置)
 
 <!-- /code_chunk_output -->
 

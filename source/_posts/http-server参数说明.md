@@ -12,8 +12,8 @@ categories:
 tags:
   - 标签1
   - 标签2
-mp3: /music/.mp3
-cover: /img/.jpg
+mp3: 
+cover:
 date: 2022-12-23 14:55:27
 ---
 <!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=true} -->
