@@ -8,24 +8,23 @@ toc:
   ordered: true
 title: docker命令
 categories:
-  - 分类1
+  - linux
 tags:
-  - 标签1
-  - 标签2
+  - docker
 date: 2022-12-16 15:28:03
 ---
 <!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=true} -->
 <!-- code_chunk_output -->
 
-- [以nginx为例](#以nginx为例)
-  - [拉取镜像](#拉取镜像)
-  - [查看镜像](#查看镜像)
-  - [运行镜像](#运行镜像)
-  - [查看当前运行中应用](#查看当前运行中应用)
-  - [停止容器](#停止容器)
-  - [重启容器](#重启容器)
-- [安装并启动nacos 单机版](#安装并启动nacos-单机版)
-- [docker查看容器详细信息](#docker查看容器详细信息)
+1. [以nginx为例](#以nginx为例)
+    1. [拉取镜像](#拉取镜像)
+    2. [查看镜像](#查看镜像)
+    3. [运行镜像](#运行镜像)
+    4. [查看当前运行中应用](#查看当前运行中应用)
+    5. [停止容器](#停止容器)
+    6. [重启容器](#重启容器)
+2. [安装并启动nacos 单机版](#安装并启动nacos-单机版)
+3. [docker查看容器详细信息](#docker查看容器详细信息)
 
 <!-- /code_chunk_output -->
 ## 以nginx为例

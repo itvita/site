@@ -4337,11 +4337,10 @@ chmod 755 /data/sftp/mysftp2020/upload
 
 <h2 id="docker查看容器详细信息"><a href="#docker查看容器详细信息" class="headerlink" title="docker查看容器详细信息"></a>docker查看容器详细信息</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker inspect 容器ID</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
-        <category>分类1</category>
+        <category>linux</category>
       </categories>
       <tags>
-        <tag>标签1</tag>
-        <tag>标签2</tag>
+        <tag>docker</tag>
       </tags>
   </entry>
   <entry>
