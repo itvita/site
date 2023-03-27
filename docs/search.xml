@@ -4289,19 +4289,19 @@ chmod 755 /data/sftp/mysftp2020/upload
     <content><![CDATA[<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=true} -->
 <!-- code_chunk_output -->
 
-<ul>
-<li><a href="#%E4%BB%A5nginx%E4%B8%BA%E4%BE%8B">以nginx为例</a><ul>
+<ol>
+<li><a href="#%E4%BB%A5nginx%E4%B8%BA%E4%BE%8B">以nginx为例</a><ol>
 <li><a href="#%E6%8B%89%E5%8F%96%E9%95%9C%E5%83%8F">拉取镜像</a></li>
 <li><a href="#%E6%9F%A5%E7%9C%8B%E9%95%9C%E5%83%8F">查看镜像</a></li>
 <li><a href="#%E8%BF%90%E8%A1%8C%E9%95%9C%E5%83%8F">运行镜像</a></li>
 <li><a href="#%E6%9F%A5%E7%9C%8B%E5%BD%93%E5%89%8D%E8%BF%90%E8%A1%8C%E4%B8%AD%E5%BA%94%E7%94%A8">查看当前运行中应用</a></li>
 <li><a href="#%E5%81%9C%E6%AD%A2%E5%AE%B9%E5%99%A8">停止容器</a></li>
 <li><a href="#%E9%87%8D%E5%90%AF%E5%AE%B9%E5%99%A8">重启容器</a></li>
-</ul>
+</ol>
 </li>
 <li><a href="#%E5%AE%89%E8%A3%85%E5%B9%B6%E5%90%AF%E5%8A%A8nacos-%E5%8D%95%E6%9C%BA%E7%89%88">安装并启动nacos 单机版</a></li>
 <li><a href="#docker%E6%9F%A5%E7%9C%8B%E5%AE%B9%E5%99%A8%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF">docker查看容器详细信息</a></li>
-</ul>
+</ol>
 <!-- /code_chunk_output -->
 <h2 id="以nginx为例"><a href="#以nginx为例" class="headerlink" title="以nginx为例"></a>以nginx为例</h2><h3 id="拉取镜像"><a href="#拉取镜像" class="headerlink" title="拉取镜像"></a>拉取镜像</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker pull nginx:latest</span><br></pre></td></tr></table></figure>
 
@@ -4522,6 +4522,47 @@ chmod 755 /data/sftp/mysftp2020/upload
       </categories>
       <tags>
         <tag>需求</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ubuntu子系统图形界面</title>
+    <url>/20230324/ubuntu%E5%AD%90%E7%B3%BB%E7%BB%9F%E5%9B%BE%E5%BD%A2%E7%95%8C%E9%9D%A2/</url>
+    <content><![CDATA[<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=true} -->
+<!-- code_chunk_output -->
+
+<ul>
+<li><a href="#%E5%AE%89%E8%A3%85%E5%9B%BE%E5%BD%A2%E7%95%8C%E9%9D%A2">安装图形界面</a></li>
+<li><a href="#%E5%AE%89%E8%A3%85%E5%B9%B6%E9%85%8D%E7%BD%AE%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E6%9C%8D%E5%8A%A1xrdp">安装并配置远程桌面服务xrdp</a><ul>
+<li><a href="#%E5%AE%89%E8%A3%85xrdp">安装xrdp</a></li>
+<li><a href="#%E9%85%8D%E7%BD%AExrdp%E7%AB%AF%E5%8F%A3%E5%B0%86%E8%BF%9C%E7%A8%8B%E7%AB%AF%E5%8F%A3%E6%94%B9%E4%B8%BA3390%E9%81%BF%E5%85%8D%E5%92%8C%E6%9C%AC%E6%9C%BA%E7%9A%843389%E7%AB%AF%E5%8F%A3%E5%86%B2%E7%AA%81">配置xrdp端口（将远程端口改为3390，避免和本机的3389端口冲突）</a></li>
+<li><a href="#%E9%85%8D%E7%BD%AExsession">配置xsession</a></li>
+<li><a href="#%E9%87%8D%E5%90%AFxrdp%E6%9C%8D%E5%8A%A1">重启xrdp服务</a></li>
+</ul>
+</li>
+<li><a href="#%E4%BD%BF%E7%94%A8win10%E7%9A%84%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E8%BF%9E%E6%8E%A5%E5%B7%A5%E5%85%B7">使用win10的远程桌面连接工具</a></li>
+</ul>
+<!-- /code_chunk_output -->
+
+
+<h2 id="安装图形界面"><a href="#安装图形界面" class="headerlink" title="安装图形界面"></a>安装图形界面</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo apt install xorg</span><br><span class="line">sudo apt install xfce4</span><br></pre></td></tr></table></figure>
+
+<h2 id="安装并配置远程桌面服务xrdp"><a href="#安装并配置远程桌面服务xrdp" class="headerlink" title="安装并配置远程桌面服务xrdp"></a>安装并配置远程桌面服务xrdp</h2><h3 id="安装xrdp"><a href="#安装xrdp" class="headerlink" title="安装xrdp"></a>安装xrdp</h3><pre><code>sudo apt install xrdp
+</code></pre>
+<h3 id="配置xrdp端口（将远程端口改为3390，避免和本机的3389端口冲突）"><a href="#配置xrdp端口（将远程端口改为3390，避免和本机的3389端口冲突）" class="headerlink" title="配置xrdp端口（将远程端口改为3390，避免和本机的3389端口冲突）"></a>配置xrdp端口（将远程端口改为3390，避免和本机的3389端口冲突）</h3><pre><code>sudo sed -i &#39;s/port=3389/port=3390/g&#39; /etc/xrdp/xrdp.ini
+</code></pre>
+<h3 id="配置xsession"><a href="#配置xsession" class="headerlink" title="配置xsession"></a>配置xsession</h3><pre><code>sudo echo xfce4-session &gt;~/.xsession
+</code></pre>
+<h3 id="重启xrdp服务"><a href="#重启xrdp服务" class="headerlink" title="重启xrdp服务"></a>重启xrdp服务</h3><pre><code>sudo service xrdp restart
+</code></pre>
+<h2 id="使用win10的远程桌面连接工具"><a href="#使用win10的远程桌面连接工具" class="headerlink" title="使用win10的远程桌面连接工具"></a>使用win10的远程桌面连接工具</h2><pre><code>localhost:3390
+</code></pre>
+]]></content>
+      <categories>
+        <category>分类1</category>
+      </categories>
+      <tags>
+        <tag>标签1</tag>
+        <tag>标签2</tag>
       </tags>
   </entry>
 </search>
