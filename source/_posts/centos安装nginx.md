@@ -23,7 +23,7 @@ wget http://nginx.org/download/nginx-1.18.0.tar.gz
 # 安装依赖包
 
 ```shell
-yum install gcc gcc-c++ pcre* openssl* gd-devel* zlib-devel pcre-devel
+yum install gcc gcc-c++ pcre* openssl* gd-devel* zlib-devel pcre-devel -y
 ```
 
 # 解压并进入目录
@@ -127,6 +127,12 @@ server {
 	   alias /usr/local/mymini/cpp-web;
        index login.html;
     }
+    # vue
+    location /vue/{
+            alias /opt/resources/static/;
+            index index.html;
+            try_files $uri $uri/ /vue/index.html;
+        }
 }
 ```
 

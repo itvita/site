@@ -9,7 +9,18 @@ mp3: /music/光辉岁月.mp3
 cover: /img/pexels-gabriel-hohol-3593923.jpg
 date: 2022-11-22 11:41:40
 ---
-# 下载
+
+# yum安装
+```
+yum list java*
+
+java-1.8.0-openjdk-devel.x86_64
+```
+
+
+
+----
+# 下载安装
 [jdk8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 
 # 解压

@@ -1,5 +1,5 @@
 ---
-title: centos安装mysql
+title: centos安装mysql5.7
 categories:
   - linux
 tags:
@@ -37,8 +37,6 @@ mv mysql-5.7.32-linux-glibc2.12-x86_64.tar.gz /usr/local
 **4、解压**
 
 ```shell
-#解压tar包：
-tar -xvf mysql-5.7.32-linux-glibc2.12-x86_64.tar.gz
 #解压下载下来的mysql软件压缩包，执行命令：
 tar -zxvf mysql-5.7.32-linux-glibc2.12-x86_64.tar.gz
 ```

@@ -30,11 +30,25 @@ cd redis-6.0.9
 ```
 
 # 4、编译安装
-
+```
+# 如果缺少c/c++依赖，则安装
+yum -y install gcc-c++ automake autoconf
+```
+>直接编译安装
 ```
 make && make install
 ```
+> 或者编译安装到指定目录，比如安装到：/usr/local/redis
+```
+# 编译
+make
 
+# 安装
+mkdir -p /etc/redis
+make PREFIX=/etc/redis install
+# 迁移配置文件到安装目录
+cp redis.conf /etc/redis
+```
 # 5、移动脚本&配置文件
 
 > 把redis-6.0.9/src目录下的mkreleasehdr.sh，redis-benchmark， redis-check-rdb， redis-cli， redis-server拷贝到redis-6.0.9/bin目录
