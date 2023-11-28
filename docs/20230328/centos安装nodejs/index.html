@@ -1,0 +1,298 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>centos安装nodejs - IT技术分享</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="baidu-site-verification" content="codeva-VAzTC6v60l" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="itvita,"> 
+    <meta name="description" content="itvita,IT技术分享,刘强,java,vue,
+
+
+
+下载node.js
+下载通过sftp上传到centos或者通过wget直接下载到服务器
+解压
+配置环境变量
+
+
+下载node.jshttps://nodejs.cn/download/
+
+下,"> 
+    <meta name="author" content="Liu Qiang"> 
+    <link rel="alternative" href="atom.xml" title="IT技术分享" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+<link rel="stylesheet" href="//unpkg.com/gitalk/dist/gitalk.css">
+
+    
+    
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="centos安装nodejs - IT技术分享"/>
+    <meta name="twitter:description" content="itvita,IT技术分享,刘强,java,vue,
+
+
+
+下载node.js
+下载通过sftp上传到centos或者通过wget直接下载到服务器
+解压
+配置环境变量
+
+
+下载node.jshttps://nodejs.cn/download/
+
+下,"/>
+    
+    
+    
+    
+    <meta property="og:site_name" content="IT技术分享"/>
+    <meta property="og:type" content="object"/>
+    <meta property="og:title" content="centos安装nodejs - IT技术分享"/>
+    <meta property="og:description" content="itvita,IT技术分享,刘强,java,vue,
+
+
+
+下载node.js
+下载通过sftp上传到centos或者通过wget直接下载到服务器
+解压
+配置环境变量
+
+
+下载node.jshttps://nodejs.cn/download/
+
+下,"/>
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+    <script>window.searchDbPath = "/search.xml";</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">IT技术分享</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://itvita.cn"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">centos安装nodejs</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">centos安装nodejs</h1>
+        <div class="stuff">
+            <span>三月 28, 2023</span>
+            
+  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/centos/" rel="tag">centos</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/nodejs/" rel="tag">nodejs</a></li></ul>
+
+
+        </div>
+        <div class="content markdown">
+            <!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=true} -->
+<!-- code_chunk_output -->
+
+<ol>
+<li><a href="#%E4%B8%8B%E8%BD%BDnodejs">下载node.js</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%80%9A%E8%BF%87sftp%E4%B8%8A%E4%BC%A0%E5%88%B0centos%E6%88%96%E8%80%85%E9%80%9A%E8%BF%87wget%E7%9B%B4%E6%8E%A5%E4%B8%8B%E8%BD%BD%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8">下载通过sftp上传到centos或者通过wget直接下载到服务器</a></li>
+<li><a href="#%E8%A7%A3%E5%8E%8B">解压</a></li>
+<li><a href="#%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F">配置环境变量</a></li>
+</ol>
+<!-- /code_chunk_output -->
+<h2 id="下载node-js"><a href="#下载node-js" class="headerlink" title="下载node.js"></a>下载node.js</h2><p><a target="_blank" rel="noopener" href="https://nodejs.cn/download/">https://nodejs.cn/download/</a></p>
+<p><img src="/img/20230328101928.png"></p>
+<h2 id="下载通过sftp上传到centos或者通过wget直接下载到服务器"><a href="#下载通过sftp上传到centos或者通过wget直接下载到服务器" class="headerlink" title="下载通过sftp上传到centos或者通过wget直接下载到服务器"></a>下载通过sftp上传到centos或者通过wget直接下载到服务器</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://nodejs.org/dist/v16.9.1/node-v16.9.1-linux-x64.tar.gz</span><br></pre></td></tr></table></figure>
+<h2 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf xxxx.tar.gz</span><br></pre></td></tr></table></figure>
+<h2 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># 打开配置文件</span><br><span class="line">vim /etc/profile</span><br><span class="line"> </span><br><span class="line"># 添加配置</span><br><span class="line">export NODE_HOME=/data/node-v16.9.1-linux-x64</span><br><span class="line">export PATH=$NODE_HOME/bin:$PATH</span><br><span class="line"> pwd</span><br><span class="line"> </span><br><span class="line"># 重新加载profile文件</span><br><span class="line">source /etc/profile</span><br></pre></td></tr></table></figure>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title="0" data-url="https://link.hhtjim.com/163/1945857126.mp3"></li>
+                        
+                    
+                        
+                            <li title="1" data-url="https://link.hhtjim.com/163/1420349595.mp3"></li>
+                        
+                    
+                        
+                            <li title="2" data-url="https://link.hhtjim.com/163/28029509.mp3"></li>
+                        
+                    
+                        
+                            <li title="3" data-url="http://link.hhtjim.com/163/425570952.mp3"></li>
+                        
+                    
+                        
+                            <li title="4" data-url="//music/Anesthesia-Vexento.mp3"></li>
+                        
+                    
+                        
+                            <li title="5" data-url="//music/爱丽丝的梦游仙境.mp3"></li>
+                        
+                    
+                        
+                            <li title="6" data-url="//music/当爱情在靠近.mp3"></li>
+                        
+                    
+                        
+                            <li title="7" data-url="//music/海阔天空.mp3"></li>
+                        
+                    
+                        
+                            <li title="8" data-url="//music/美丽的神话.mp3"></li>
+                        
+                    
+                        
+                            <li title="9" data-url="//music/咱们结婚吧.mp3"></li>
+                        
+                    
+                        
+                            <li title="10" data-url="//music/这就是爱吗.mp3"></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+        
+    <div id="gitalk-container" class="comment link"
+		data-enable="true"
+        data-ae="true"
+        data-ci="d1bce04390a8da2fa2ac"
+        data-cs="7194f621e1c1fa838710abd2a4a7ff05e4e511de"
+        data-r="site"
+        data-o="itvita"
+        data-a="itvita"
+        data-d="true"
+    >查看评论</div>
+
+
+    </div>
+    
+        <div class="side">
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BDnode-js"><span class="toc-number">1.</span> <span class="toc-text">下载node.js</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD%E9%80%9A%E8%BF%87sftp%E4%B8%8A%E4%BC%A0%E5%88%B0centos%E6%88%96%E8%80%85%E9%80%9A%E8%BF%87wget%E7%9B%B4%E6%8E%A5%E4%B8%8B%E8%BD%BD%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-number">2.</span> <span class="toc-text">下载通过sftp上传到centos或者通过wget直接下载到服务器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E5%8E%8B"><span class="toc-number">3.</span> <span class="toc-text">解压</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="toc-number">4.</span> <span class="toc-text">配置环境变量</span></a></li></ol>
+        </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+<script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/caidaibg.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+        tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno",skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']},
+        TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}" } },
+        messageStyle: "none"
+    });
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+
+</html>
